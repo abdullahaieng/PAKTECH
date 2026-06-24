@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PakTech — E-commerce Store + Admin Dashboard
 
 Pakistan's premium tech accessories store with built-in admin panel on the same site.
@@ -87,3 +88,7 @@ It runs `npm ci`, `npm run lint`, and `npm run build` on pushes and pull request
 ## Legacy Admin App
 
 The separate `admin/` folder (port 3001) is deprecated. Use `/admin` on the main site instead.
+=======
+# PAKTECH
+e COM WEBSITE
+>>>>>>> fc6cc85625f562379fce574bdc61dfb29a5f8f72
