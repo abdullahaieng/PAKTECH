@@ -55,72 +55,91 @@ function ProductCardComponent({ product, className }: ProductCardProps) {
   return (
     <div
       className={cn(
-        "group relative rounded-2xl border border-border bg-card overflow-hidden interactive-card transition-transform duration-300 hover:-translate-y-1",
+        "group relative rounded-3xl border border-border/40 bg-card overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1.5 transition-all duration-500 ease-out",
         className
       )}
     >
       <Link href={`/product/${product.slug}`} className="block">
-        <div className="relative aspect-square bg-muted/30 overflow-hidden">
+        {/* Image Frame */}
+        <div className="relative aspect-square bg-secondary/30 overflow-hidden">
           <Image
             src={product.images[0]}
             alt={product.name}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-          <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+          
+          {/* Subtle overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/[0.04] via-transparent to-transparent" />
+ 
+          {/* Badges on Top-Left */}
+          <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10">
             {hasDiscount && (
-              <Badge variant="sale">-{getDiscountPercentage(product.price, product.salePrice!)}%</Badge>
+              <Badge variant="sale" className="font-extrabold uppercase text-[10px] tracking-wider">
+                -{getDiscountPercentage(product.price, product.salePrice!)}%
+              </Badge>
             )}
-            {product.isNewArrival && <Badge variant="new">New</Badge>}
-            {product.isFlashSale && <Badge variant="sale">Flash</Badge>}
+            {product.isNewArrival && (
+              <Badge variant="new" className="font-extrabold uppercase text-[10px] tracking-wider">
+                New
+              </Badge>
+            )}
+            {product.isFlashSale && (
+              <Badge variant="sale" className="bg-amber-500 text-white font-extrabold uppercase text-[10px] tracking-wider animate-pulse-glow">
+                Flash
+              </Badge>
+            )}
           </div>
-
-          <div className="absolute top-3 right-3 flex flex-col gap-2 translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
+ 
+          {/* Quick Actions Panel on Top-Right */}
+          <div className="absolute top-4 right-4 flex flex-col gap-2 z-10 opacity-0 group-hover:opacity-100 translate-y-[-8px] group-hover:translate-y-0 transition-all duration-300">
             <Button
               size="icon"
-              variant="secondary"
-              className="h-9 w-9 rounded-full shadow-lg"
+              className="h-9 w-9 rounded-full shadow-md bg-background/95 hover:bg-background border border-border/40 text-foreground/80 hover:text-red-500 transition-all duration-200"
               onClick={handleWishlist}
               aria-label="Add to wishlist"
             >
-              <Heart className={cn("h-4 w-4", isInWishlist && "fill-accent text-accent")} />
+              <Heart className={cn("h-4 w-4 transition-transform active:scale-75", isInWishlist && "fill-red-500 text-red-500")} />
             </Button>
             <Button
               size="icon"
-              variant="secondary"
-              className="h-9 w-9 rounded-full shadow-lg"
+              className="h-9 w-9 rounded-full shadow-md bg-background/95 hover:bg-background border border-border/40 text-foreground/80 hover:text-primary transition-all duration-200"
               onClick={handleQuickView}
               aria-label="Quick view"
             >
               <Eye className="h-4 w-4" />
             </Button>
           </div>
-
-          <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
-            <Button className="w-full" variant="accent" onClick={handleAddToCart} disabled={product.stock === 0}>
+ 
+          {/* Hover Slide-up Add to Cart Bar */}
+          <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-10">
+            <Button className="w-full rounded-2xl shadow-lg font-bold" variant="accent" onClick={handleAddToCart} disabled={product.stock === 0}>
               <ShoppingBag className="h-4 w-4" />
               {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
             </Button>
           </div>
         </div>
-
-        <div className="p-3 space-y-1.5">
-          <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{product.brand}</p>
-          <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-primary transition-colors">
+ 
+        {/* Product Details */}
+        <div className="p-5 space-y-3">
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-[10px] text-zinc-400 uppercase tracking-widest font-bold">{product.brand}</p>
+            {/* Rating pill */}
+            <div className="flex items-center gap-1 rounded-full px-2 py-0.5 bg-zinc-100 dark:bg-zinc-900 border border-border/50 text-[11px] font-bold text-foreground/80">
+              <Star className="h-3 w-3 fill-amber-400 text-amber-400 shrink-0" />
+              <span>{product.rating}</span>
+            </div>
+          </div>
+          
+          <h3 className="font-bold text-sm leading-snug line-clamp-2 text-foreground/90 group-hover:text-primary transition-colors duration-200 h-10">
             {product.name}
           </h3>
-          <div className="flex items-center gap-1">
-            <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
-            <span className="text-xs font-bold">{product.rating}</span>
-            <span className="text-xs text-muted-foreground">({product.reviewsCount})</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-primary">{formatPrice(effectivePrice)}</span>
+ 
+          <div className="flex items-baseline gap-2.5 pt-1.5 border-t border-border/10">
+            <span className="font-extrabold text-base text-primary">{formatPrice(effectivePrice)}</span>
             {hasDiscount && (
-              <span className="text-sm text-muted-foreground line-through">{formatPrice(product.price)}</span>
+              <span className="text-xs text-muted-foreground line-through font-medium">{formatPrice(product.price)}</span>
             )}
           </div>
         </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { generateMetadata as genMeta } from "@/lib/seo";
 import { getAllCategories } from "@/lib/services/category-service";
 import { filterProducts, getPriceRange } from "@/lib/services/product-service";
+import { ensureStoreReady } from "@/lib/db/store";
 import { ShopClient } from "./shop-client";
 
 export const dynamic = "force-dynamic";
@@ -18,6 +19,7 @@ export default async function ShopPage({
   searchParams: Promise<Record<string, string | undefined>>;
 }) {
   const sp = await searchParams;
+  await ensureStoreReady();
   const priceRange = getPriceRange();
   const categories = getAllCategories();
   const products = filterProducts({

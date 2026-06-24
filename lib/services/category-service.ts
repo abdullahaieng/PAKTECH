@@ -1,5 +1,5 @@
 import type { Category } from "@/types";
-import { getDatabase, updateDatabase } from "@/lib/db/file-store";
+import { getDatabase, updateDatabase } from "@/lib/db/store";
 
 export function getAllCategories(): Category[] {
   return getDatabase().categories;

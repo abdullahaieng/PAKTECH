@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
 import { getAllProducts } from "@/lib/services/product-service";
+import { ensureStoreReady } from "@/lib/db/store";
 import { SITE_CONFIG } from "@/lib/constants";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  await ensureStoreReady();
   const productUrls = getAllProducts().map((product) => ({
     url: `${SITE_CONFIG.url}/product/${product.slug}`,
     lastModified: new Date(),

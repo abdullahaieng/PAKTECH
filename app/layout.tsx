@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "./providers";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
-import { DeferredUI } from "@/components/layout/deferred-ui";
+import { AppShell } from "@/components/layout/app-shell";
 import { generateMetadata as genMeta, generateOrganizationJsonLd, generateWebsiteJsonLd } from "@/lib/seo";
+import { initializeStore } from "@/lib/db/store";
 import "@/styles/globals.css";
 
 const geistSans = Geist({
@@ -19,7 +18,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = genMeta();
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  await initializeStore();
+
   const orgJsonLd = generateOrganizationJsonLd();
   const websiteJsonLd = generateWebsiteJsonLd();
 
@@ -37,10 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <Providers>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <DeferredUI />
+          <AppShell>{children}</AppShell>
         </Providers>
       </body>
     </html>

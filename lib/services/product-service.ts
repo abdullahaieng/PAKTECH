@@ -1,5 +1,5 @@
 import type { Product } from "@/types";
-import { getDatabase, updateDatabase } from "@/lib/db/file-store";
+import { getDatabase, commitDatabaseUpdate } from "@/lib/db/store";
 
 export function getAllProducts(): Product[] {
   return getDatabase().products;
@@ -95,9 +95,9 @@ export function filterProducts(options: {
   return filtered;
 }
 
-export function createProduct(data: Omit<Product, "id">): Product {
+export async function createProduct(data: Omit<Product, "id">): Promise<Product> {
   const product: Product = { ...data, id: `prod-${Date.now()}` };
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     db.products.unshift(product);
     const cat = db.categories.find((c) => c.slug === product.category);
     if (cat) cat.productCount += 1;
@@ -105,9 +105,9 @@ export function createProduct(data: Omit<Product, "id">): Product {
   return product;
 }
 
-export function updateProduct(id: string, data: Partial<Product>): Product | null {
+export async function updateProduct(id: string, data: Partial<Product>): Promise<Product | null> {
   let updated: Product | null = null;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const index = db.products.findIndex((p) => p.id === id);
     if (index === -1) return;
     const product = { ...db.products[index], ...data, id };
@@ -120,9 +120,9 @@ export function updateProduct(id: string, data: Partial<Product>): Product | nul
   return updated;
 }
 
-export function deleteProduct(id: string): boolean {
+export async function deleteProduct(id: string): Promise<boolean> {
   let deleted = false;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const index = db.products.findIndex((p) => p.id === id);
     if (index === -1) return;
     const product = db.products[index];
@@ -134,9 +134,9 @@ export function deleteProduct(id: string): boolean {
   return deleted;
 }
 
-export function decrementStock(productId: string, quantity: number): boolean {
+export async function decrementStock(productId: string, quantity: number): Promise<boolean> {
   let success = false;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const product = db.products.find((p) => p.id === productId);
     if (!product || product.stock < quantity) return;
     product.stock -= quantity;
@@ -145,8 +145,8 @@ export function decrementStock(productId: string, quantity: number): boolean {
   return success;
 }
 
-export function incrementStock(productId: string, quantity: number): void {
-  updateDatabase((db) => {
+export async function incrementStock(productId: string, quantity: number): Promise<void> {
+  await commitDatabaseUpdate((db) => {
     const product = db.products.find((p) => p.id === productId);
     if (product) product.stock += quantity;
   });
@@ -156,13 +156,13 @@ export function getProductsOnSale(): Product[] {
   return getAllProducts().filter((p) => p.salePrice && p.salePrice < p.price);
 }
 
-export function applyBulkSale(options: {
+export async function applyBulkSale(options: {
   percentOff: number;
   category?: string;
   flashSale?: boolean;
-}): { updated: number } {
+}): Promise<{ updated: number }> {
   let updated = 0;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     for (const product of db.products) {
       if (options.category && options.category !== "all" && product.category !== options.category) {
         continue;
@@ -175,9 +175,9 @@ export function applyBulkSale(options: {
   return { updated };
 }
 
-export function clearSales(options?: { category?: string }): { updated: number } {
+export async function clearSales(options?: { category?: string }): Promise<{ updated: number }> {
   let updated = 0;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     for (const product of db.products) {
       if (options?.category && options.category !== "all" && product.category !== options.category) {
         continue;
@@ -192,6 +192,6 @@ export function clearSales(options?: { category?: string }): { updated: number }
   return { updated };
 }
 
-export function removeProductSale(id: string): Product | null {
+export async function removeProductSale(id: string): Promise<Product | null> {
   return updateProduct(id, { salePrice: undefined, isFlashSale: false });
 }

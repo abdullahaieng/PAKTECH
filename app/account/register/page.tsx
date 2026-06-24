@@ -15,6 +15,7 @@ import { AuthCard } from "@/components/account/auth-card";
 import { GoogleSignInButton } from "@/components/account/google-sign-in-button";
 import { useAuth } from "@/components/providers/auth-provider";
 import { useToast } from "@/components/providers/notification-provider";
+import { registerWithEmail } from "@/lib/firebase/auth-actions";
 
 const registerSchema = z.object({
   name: z.string().min(2, "Name required"),
@@ -31,7 +32,7 @@ type RegisterForm = z.infer<typeof registerSchema>;
 
 export default function RegisterPage() {
   const router = useRouter();
-  const { user, refresh } = useAuth();
+  const { user, refresh, firebaseEnabled } = useAuth();
   const { toast } = useToast();
   const form = useForm<RegisterForm>({ resolver: zodResolver(registerSchema) });
 
@@ -41,6 +42,19 @@ export default function RegisterPage() {
 
   const onSubmit = async (data: RegisterForm) => {
     try {
+      if (firebaseEnabled) {
+        await registerWithEmail({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          password: data.password,
+        });
+        await refresh();
+        toast("Account created successfully!", "success");
+        router.push("/account");
+        return;
+      }
+
       const res = await fetch("/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

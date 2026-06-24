@@ -1,5 +1,5 @@
 import type { CheckoutFormData, Order, OrderLineItem, OrderStatus } from "@/types";
-import { getDatabase, updateDatabase } from "@/lib/db/file-store";
+import { getDatabase, commitDatabaseUpdate } from "@/lib/db/store";
 import { getEffectivePrice } from "@/lib/format";
 import { validateCoupon, calculateDiscount } from "./coupon-service";
 
@@ -32,7 +32,7 @@ export function getOrdersByEmail(email: string): Order[] {
   );
 }
 
-export function createOrder(input: CreateOrderInput): { order: Order } | { error: string } {
+export async function createOrder(input: CreateOrderInput): Promise<{ order: Order } | { error: string }> {
   const db = getDatabase();
   const lineItems: OrderLineItem[] = [];
   let subtotal = 0;
@@ -92,7 +92,7 @@ export function createOrder(input: CreateOrderInput): { order: Order } | { error
     notes: input.shippingAddress.notes,
   };
 
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     for (const item of lineItems) {
       const product = db.products.find((p) => p.id === item.productId);
       if (product) product.stock -= item.quantity;
@@ -103,9 +103,9 @@ export function createOrder(input: CreateOrderInput): { order: Order } | { error
   return { order };
 }
 
-export function updateOrderStatus(id: string, status: OrderStatus): Order | null {
+export async function updateOrderStatus(id: string, status: OrderStatus): Promise<Order | null> {
   let updated: Order | null = null;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const order = db.orders.find((o) => o.id === id);
     if (!order) return;
     order.status = status;
@@ -114,9 +114,9 @@ export function updateOrderStatus(id: string, status: OrderStatus): Order | null
   return updated;
 }
 
-export function deleteOrder(id: string): boolean {
+export async function deleteOrder(id: string): Promise<boolean> {
   let deleted = false;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const index = db.orders.findIndex((o) => o.id === id);
     if (index === -1) return;
     const order = db.orders[index];
@@ -134,9 +134,9 @@ export function deleteOrder(id: string): boolean {
   return deleted;
 }
 
-export function cancelOrder(id: string): Order | null {
+export async function cancelOrder(id: string): Promise<Order | null> {
   let cancelled: Order | null = null;
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const order = db.orders.find((o) => o.id === id);
     if (!order || order.status === "cancelled") return;
 

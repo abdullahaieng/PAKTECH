@@ -1,5 +1,5 @@
 import type { Coupon } from "@/types";
-import { getDatabase, updateDatabase } from "@/lib/db/file-store";
+import { getDatabase, updateDatabase } from "@/lib/db/store";
 
 export function getAllCoupons(): Coupon[] {
   return getDatabase().coupons;

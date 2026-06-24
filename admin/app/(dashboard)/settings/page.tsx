@@ -105,9 +105,8 @@ export default function SettingsPage() {
       <div className="mt-8 bg-slate-50 rounded-xl border p-5 max-w-md">
         <h3 className="font-semibold text-sm mb-2">Database Integration</h3>
         <p className="text-xs text-[var(--muted)] leading-relaxed">
-          Data is currently saved in <code className="bg-slate-200 px-1 rounded">data/store-db.json</code>.
-          To add a database, replace <code className="bg-slate-200 px-1 rounded">lib/db/file-store.ts</code> with
-          Prisma/Drizzle — everything else stays the same.
+          When Firestore is enabled, user and store data persist in Firebase rather than the local JSON file.
+          In production, set <code className="bg-slate-200 px-1 rounded">FIRESTORE_ENABLED=true</code> and provide a Firebase service account via <code className="bg-slate-200 px-1 rounded">FIREBASE_SERVICE_ACCOUNT_PATH</code> or <code className="bg-slate-200 px-1 rounded">FIREBASE_SERVICE_ACCOUNT_JSON</code>.
         </p>
       </div>
     </div>

@@ -1,9 +1,11 @@
 import { filterProducts, getAllProducts, getPriceRange } from "@/lib/services/product-service";
+import { ensureStoreReady } from "@/lib/db/store";
 import { ok } from "@/lib/api/response";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
+  await ensureStoreReady();
   const { searchParams } = new URL(request.url);
   const hasFilters =
     searchParams.has("search") ||

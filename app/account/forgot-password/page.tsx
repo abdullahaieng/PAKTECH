@@ -11,17 +11,28 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { AuthCard } from "@/components/account/auth-card";
+import { useAuth } from "@/components/providers/auth-provider";
 import { useToast } from "@/components/providers/notification-provider";
+import { resetPasswordEmail } from "@/lib/firebase/auth-actions";
 
 const schema = z.object({ email: z.string().email("Valid email required") });
 
 export default function ForgotPasswordPage() {
+  const { firebaseEnabled } = useAuth();
   const { toast } = useToast();
+  const [sent, setSent] = useState(false);
   const [resetUrl, setResetUrl] = useState<string | null>(null);
   const form = useForm({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: z.infer<typeof schema>) => {
     try {
+      if (firebaseEnabled) {
+        await resetPasswordEmail(data.email);
+        setSent(true);
+        toast("Password reset email sent! Check your inbox.", "success");
+        return;
+      }
+
       const res = await fetch("/api/auth/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -43,7 +54,7 @@ export default function ForgotPasswordPage() {
     <div className="container-custom py-8">
       <Breadcrumbs items={[{ label: "Account" }, { label: "Forgot Password" }]} className="mb-6" />
       <AuthCard title="Reset Password" subtitle="We&apos;ll send a reset link to your email">
-        {!resetUrl ? (
+        {!resetUrl && !sent ? (
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <div className="flex justify-center mb-2">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -61,12 +72,18 @@ export default function ForgotPasswordPage() {
               {form.formState.isSubmitting ? "Sending..." : "Send Reset Link"}
             </Button>
           </form>
+        ) : sent ? (
+          <div className="text-center space-y-4">
+            <p className="text-sm text-muted-foreground">
+              Check your email for a password reset link. If you don&apos;t see it, check your spam folder.
+            </p>
+          </div>
         ) : (
           <div className="text-center space-y-4">
             <p className="text-sm text-muted-foreground">
               Development mode: use the reset link below (emails will be sent in production)
             </p>
-            <Link href={resetUrl} className="block text-sm text-primary font-medium break-all hover:underline">
+            <Link href={resetUrl!} className="block text-sm text-primary font-medium break-all hover:underline">
               {resetUrl}
             </Link>
           </div>

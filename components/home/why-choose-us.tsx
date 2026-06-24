@@ -1,68 +1,77 @@
 "use client";
 
-import { Shield, Truck, HeadphonesIcon, Award } from "lucide-react";
+import { ShieldCheck, Truck, Lock, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/shared/scroll-animation";
-
+ 
 const features = [
   {
-    icon: Shield,
-    title: "100% Original Products",
-    description: "Every product comes with an authenticity guarantee. No fakes, no compromises.",
-    gradient: "from-indigo-500 to-violet-600",
-    glow: "shadow-indigo-500/20",
-  },
-  {
     icon: Truck,
-    title: "Nationwide Delivery",
-    description: "Fast and reliable delivery across Pakistan. 150+ cities covered.",
-    gradient: "from-cyan-500 to-blue-600",
-    glow: "shadow-cyan-500/20",
+    title: "Fast Delivery",
+    description: "Swift nationwide dispatch in 2-3 days with reliable tracking directly to your doorstep.",
+    gradient: "from-cyan-500/10 to-blue-500/10",
+    iconColor: "text-cyan-500",
+    borderColor: "hover:border-cyan-500/20",
+    glow: "shadow-cyan-500/5",
   },
   {
-    icon: HeadphonesIcon,
-    title: "Expert Support",
-    description: "Dedicated customer support team available on WhatsApp and phone.",
-    gradient: "from-violet-500 to-purple-600",
-    glow: "shadow-violet-500/20",
+    icon: ShieldCheck,
+    title: "Genuine Products",
+    description: "100% authentic tech accessories sourced directly from official brand manufacturers.",
+    gradient: "from-indigo-500/10 to-violet-500/10",
+    iconColor: "text-indigo-500",
+    borderColor: "hover:border-indigo-500/20",
+    glow: "shadow-indigo-500/5",
+  },
+  {
+    icon: Lock,
+    title: "Secure Payments",
+    description: "Shop with absolute peace of mind using encrypted gateways or Cash on Delivery options.",
+    gradient: "from-purple-500/10 to-pink-500/10",
+    iconColor: "text-purple-500",
+    borderColor: "hover:border-purple-500/20",
+    glow: "shadow-purple-500/5",
   },
   {
     icon: Award,
-    title: "Premium Quality",
-    description: "Only the best quality tech accessories — ones we use ourselves.",
-    gradient: "from-blue-500 to-indigo-600",
-    glow: "shadow-blue-500/20",
+    title: "Warranty Support",
+    description: "Comprehensive product warranty support to ensure your technology is always protected.",
+    gradient: "from-emerald-500/10 to-teal-500/10",
+    iconColor: "text-emerald-500",
+    borderColor: "hover:border-emerald-500/20",
+    glow: "shadow-emerald-500/5",
   },
 ];
-
+ 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-20 relative overflow-hidden">
+    <section className="py-20 md:py-32 relative overflow-hidden">
+      {/* Background soft glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
-
+ 
       <div className="container-custom relative">
-        <ScrollAnimation className="text-center mb-12">
-          <div className="h-1 w-12 gradient-bg rounded-full mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Why Choose <span className="gradient-text">PakTech</span>?
+        <ScrollAnimation className="text-center mb-16">
+          <div className="h-1 w-12 gradient-bg rounded-full mx-auto mb-6" />
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-balance">
+            Designed for <span className="gradient-text">Reliability</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            We bring premium accessories to Pakistan&apos;s tech enthusiasts — with quality, trust, and great service.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
+            We deliver original technology solutions with a premium checkout and customer care experience.
           </p>
         </ScrollAnimation>
-
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+ 
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature) => (
             <StaggerItem key={feature.title}>
               <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className={`group rounded-2xl border bg-card p-6 text-center h-full shadow-lg ${feature.glow} hover:shadow-xl transition-shadow duration-300`}
+                whileHover={{ y: -8, scale: 1.01 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                className={`group rounded-3xl border border-border/40 bg-card/40 backdrop-blur-xl p-8 text-center h-full shadow-sm hover:shadow-xl ${feature.glow} ${feature.borderColor} transition-all duration-300`}
               >
-                <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.gradient} text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                  <feature.icon className="h-8 w-8" />
+                <div className={`mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.gradient} ${feature.iconColor} shadow-inner group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-bold mb-2">{feature.title}</h3>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </motion.div>
             </StaggerItem>

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -51,20 +52,41 @@ export default function SettingsPage() {
 
   const onProfileSubmit = async (data: z.infer<typeof profileSchema>) => {
     try {
+      profileForm.clearErrors("root");
+
+      // Trim phone number
+      const payload = {
+        name: data.name?.trim(),
+        phone: data.phone?.trim() || undefined,
+      };
+
+      console.log("[settings] Sending profile update:", payload);
+
       const res = await fetch("/api/auth/profile", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
+
       const json = await res.json();
+      console.log("[settings] Profile update response:", json);
+
       if (!json.success) {
+        console.error("[settings] Update failed:", json.error);
         toast(json.error ?? "Update failed", "error");
+        profileForm.setError("root", { message: json.error });
         return;
       }
+
       await refresh();
-      toast("Profile updated!", "success");
-    } catch {
+      toast("Profile updated successfully!", "success");
+      console.log("[settings] Profile updated successfully");
+    } catch (error) {
+      console.error("[settings] Update error:", error);
       toast("Something went wrong", "error");
+      profileForm.setError("root", { 
+        message: error instanceof Error ? error.message : "Unknown error" 
+      });
     }
   };
 
@@ -96,7 +118,13 @@ export default function SettingsPage() {
 
       <div className="flex items-center gap-3 mb-8">
         {user.avatar ? (
-          <img src={user.avatar} alt={user.name} className="h-14 w-14 rounded-full border" />
+          <Image
+            src={user.avatar}
+            alt={user.name}
+            width={56}
+            height={56}
+            className="h-14 w-14 rounded-full border object-cover"
+          />
         ) : (
           <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center">
             <User className="h-7 w-7 text-primary" />
@@ -117,6 +145,11 @@ export default function SettingsPage() {
             <Settings className="h-4 w-4" /> Profile Settings
           </h2>
           <form onSubmit={profileForm.handleSubmit(onProfileSubmit)} className="space-y-4">
+            {profileForm.formState.errors.root && (
+              <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
+                {profileForm.formState.errors.root.message}
+              </div>
+            )}
             <div>
               <Label>Email</Label>
               <Input value={user.email} disabled className="mt-1 bg-muted" />
@@ -124,10 +157,21 @@ export default function SettingsPage() {
             <div>
               <Label htmlFor="name">Full Name</Label>
               <Input id="name" {...profileForm.register("name")} className="mt-1" />
+              {profileForm.formState.errors.name && (
+                <p className="text-xs text-red-600 mt-1">{profileForm.formState.errors.name.message}</p>
+              )}
             </div>
             <div>
               <Label htmlFor="phone">Phone</Label>
-              <Input id="phone" {...profileForm.register("phone")} className="mt-1" />
+              <Input 
+                id="phone" 
+                placeholder="03XX XXXXXXX"
+                {...profileForm.register("phone")} 
+                className="mt-1" 
+              />
+              {profileForm.formState.errors.phone && (
+                <p className="text-xs text-red-600 mt-1">{profileForm.formState.errors.phone.message}</p>
+              )}
             </div>
             <Button type="submit" variant="accent" disabled={profileForm.formState.isSubmitting}>
               Save Profile

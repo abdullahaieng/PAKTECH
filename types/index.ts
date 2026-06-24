@@ -169,6 +169,7 @@ export interface User {
   avatar?: string;
   provider: AuthProvider;
   googleId?: string;
+  firebaseUid?: string;
   emailVerified: boolean;
   createdAt: string;
   updatedAt: string;

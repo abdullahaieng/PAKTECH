@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getBrandStats, getTeamMembers } from "@/lib/services/content-service";
+import { ensureStoreReady } from "@/lib/db/store";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/shared/scroll-animation";
 import { generateMetadata as genMeta } from "@/lib/seo";
@@ -11,7 +12,8 @@ export const metadata: Metadata = genMeta({
   url: "https://paktech.pk/about",
 });
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  await ensureStoreReady();
   const brandStats = getBrandStats();
   const teamMembers = getTeamMembers();
 

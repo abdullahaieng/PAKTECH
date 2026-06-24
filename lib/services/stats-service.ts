@@ -1,5 +1,5 @@
 import type { DashboardStats } from "@/types";
-import { getDatabase } from "@/lib/db/file-store";
+import { getDatabase } from "@/lib/db/store";
 
 export function getDashboardStats(): DashboardStats {
   const db = getDatabase();

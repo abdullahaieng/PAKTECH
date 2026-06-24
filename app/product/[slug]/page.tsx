@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllProducts, getProductBySlug, getRelatedProducts } from "@/lib/services/product-service";
 import { getCategoryName } from "@/lib/services/category-service";
+import { ensureStoreReady } from "@/lib/db/store";
 import { generateMetadata as genMeta, generateProductJsonLd } from "@/lib/seo";
 import { ProductDetailClient } from "./product-detail-client";
 
@@ -12,11 +13,15 @@ interface ProductPageProps {
 }
 
 export async function generateStaticParams() {
-  return getAllProducts().map((product) => ({ slug: product.slug }));
+  await ensureStoreReady();
+  return getAllProducts()
+    .filter((product) => Boolean(product.slug))
+    .map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
+  await ensureStoreReady();
   const product = getProductBySlug(slug);
   if (!product) return genMeta({ title: "Product Not Found", noIndex: true });
 
@@ -30,6 +35,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
+  await ensureStoreReady();
   const product = getProductBySlug(slug);
   if (!product) notFound();
 

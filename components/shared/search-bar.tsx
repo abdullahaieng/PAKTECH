@@ -42,7 +42,7 @@ export function SearchBar({
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={placeholder}
-        className="pl-10 pr-10"
+        className="pl-10 pr-10 rounded-full bg-secondary/60 border-border/40 focus:bg-background focus:border-primary/50 focus-visible:ring-primary/20 transition-all duration-300 placeholder:text-muted-foreground/50 text-sm"
         autoFocus={autoFocus}
       />
       {query && (

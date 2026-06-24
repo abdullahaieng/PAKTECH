@@ -1,6 +1,6 @@
 import { randomBytes } from "crypto";
 import type { PublicUser, User, PasswordResetToken } from "@/types";
-import { getDatabase, updateDatabase } from "@/lib/db/file-store";
+import { getDatabase, updateDatabase, commitDatabaseUpdate } from "@/lib/db/store";
 import { hashPassword, verifyPassword } from "@/lib/auth/password";
 
 export function toPublicUser(user: User): PublicUser {
@@ -28,6 +28,10 @@ export function getUserByGoogleId(googleId: string): User | undefined {
   return getDatabase().users.find((u) => u.googleId === googleId);
 }
 
+export function getUserByFirebaseUid(firebaseUid: string): User | undefined {
+  return getDatabase().users.find((u) => u.firebaseUid === firebaseUid);
+}
+
 export function getAllUsers(): User[] {
   return getDatabase().users;
 }
@@ -39,6 +43,7 @@ export async function createUser(input: {
   password?: string;
   provider?: User["provider"];
   googleId?: string;
+  firebaseUid?: string;
   avatar?: string;
   emailVerified?: boolean;
 }): Promise<User> {
@@ -55,12 +60,13 @@ export async function createUser(input: {
     avatar: input.avatar,
     provider: input.provider ?? "email",
     googleId: input.googleId,
+    firebaseUid: input.firebaseUid,
     emailVerified: input.emailVerified ?? false,
     createdAt: now,
     updatedAt: now,
   };
 
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     db.users.push(user);
   });
 
@@ -79,15 +85,49 @@ export async function updateUserProfile(
   data: { name?: string; phone?: string }
 ): Promise<User | null> {
   let updated: User | null = null;
-  updateDatabase((db) => {
-    const user = db.users.find((u) => u.id === userId);
-    if (!user) return;
-    if (data.name) user.name = data.name;
-    if (data.phone !== undefined) user.phone = data.phone;
-    user.updatedAt = new Date().toISOString();
-    updated = user;
+  
+  const { logger } = await import("@/lib/logger");
+  
+  logger.info("user-service", "Updating user profile", {
+    userId,
+    hasName: !!data.name,
+    hasPhone: !!data.phone,
+    phone: data.phone,
   });
-  return updated;
+
+  try {
+    await commitDatabaseUpdate((db) => {
+      const user = db.users.find((u) => u.id === userId);
+      if (!user) {
+        logger.warn("user-service", "User not found for update", { userId });
+        return;
+      }
+
+      const before = { ...user };
+      if (data.name) user.name = data.name;
+      if (data.phone !== undefined) user.phone = data.phone;
+      user.updatedAt = new Date().toISOString();
+      updated = user;
+
+      logger.info("user-service", "Profile updated in database", {
+        before: { name: before.name, phone: before.phone },
+        after: { name: user.name, phone: user.phone },
+      });
+    });
+
+    if (updated) {
+      const updatedUser = updated as User;
+      logger.info("user-service", "User profile update completed", {
+        userId,
+        phone: updatedUser.phone,
+      });
+    }
+
+    return updated;
+  } catch (error) {
+    logger.error("user-service", "Failed to update profile", error as Error, { userId });
+    throw error;
+  }
 }
 
 export async function changeUserPassword(
@@ -103,7 +143,7 @@ export async function changeUserPassword(
   if (!valid) return { success: false, error: "Current password is incorrect" };
 
   const passwordHash = await hashPassword(newPassword);
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const u = db.users.find((x) => x.id === userId);
     if (u) {
       u.passwordHash = passwordHash;
@@ -115,7 +155,7 @@ export async function changeUserPassword(
 
 export async function setUserPassword(userId: string, newPassword: string): Promise<void> {
   const passwordHash = await hashPassword(newPassword);
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     const user = db.users.find((u) => u.id === userId);
     if (user) {
       user.passwordHash = passwordHash;
@@ -124,7 +164,7 @@ export async function setUserPassword(userId: string, newPassword: string): Prom
   });
 }
 
-export function createPasswordResetToken(email: string): { token: string } | { error: string } {
+export async function createPasswordResetToken(email: string): Promise<{ token: string } | { error: string }> {
   const user = getUserByEmail(email);
   if (!user) return { error: "No account found with this email" };
 
@@ -135,7 +175,7 @@ export function createPasswordResetToken(email: string): { token: string } | { e
     expiresAt: new Date(Date.now() + 3600000).toISOString(), // 1 hour
   };
 
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     db.passwordResetTokens = db.passwordResetTokens.filter((t) => t.userId !== user.id);
     db.passwordResetTokens.push(resetToken);
   });
@@ -158,7 +198,7 @@ export async function resetPasswordWithToken(
   if (!entry) return { success: false, error: "Invalid or expired reset link" };
 
   await setUserPassword(entry.userId, newPassword);
-  updateDatabase((db) => {
+  await commitDatabaseUpdate((db) => {
     db.passwordResetTokens = db.passwordResetTokens.filter((t) => t.token !== token);
   });
   return { success: true };
@@ -176,7 +216,7 @@ export async function findOrCreateGoogleUser(profile: {
 
   const byEmail = getUserByEmail(profile.email);
   if (byEmail) {
-    updateDatabase((db) => {
+    await commitDatabaseUpdate((db) => {
       const user = db.users.find((u) => u.id === byEmail.id);
       if (user) {
         user.googleId = profile.googleId;
@@ -195,6 +235,51 @@ export async function findOrCreateGoogleUser(profile: {
     avatar: profile.avatar,
     provider: "google",
     googleId: profile.googleId,
+    emailVerified: profile.emailVerified,
+  });
+}
+
+export async function findOrCreateFirebaseUser(profile: {
+  firebaseUid: string;
+  email: string;
+  name: string;
+  phone?: string;
+  avatar?: string;
+  emailVerified: boolean;
+  provider: User["provider"];
+}): Promise<User> {
+  const byFirebase = getUserByFirebaseUid(profile.firebaseUid);
+  if (byFirebase) {
+    if (profile.phone && !byFirebase.phone) {
+      return (await updateUserProfile(byFirebase.id, { name: profile.name, phone: profile.phone })) ?? byFirebase;
+    }
+    return byFirebase;
+  }
+
+  const byEmail = getUserByEmail(profile.email);
+  if (byEmail) {
+    await commitDatabaseUpdate((db) => {
+      const user = db.users.find((u) => u.id === byEmail.id);
+      if (user) {
+        user.firebaseUid = profile.firebaseUid;
+        user.avatar = profile.avatar ?? user.avatar;
+        user.emailVerified = profile.emailVerified || user.emailVerified;
+        if (profile.phone) user.phone = profile.phone;
+        if (profile.name) user.name = profile.name;
+        user.provider = profile.provider;
+        user.updatedAt = new Date().toISOString();
+      }
+    });
+    return getUserById(byEmail.id)!;
+  }
+
+  return createUser({
+    name: profile.name,
+    email: profile.email,
+    phone: profile.phone,
+    avatar: profile.avatar,
+    provider: profile.provider,
+    firebaseUid: profile.firebaseUid,
     emailVerified: profile.emailVerified,
   });
 }

@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     if (!currentPassword || !newPassword) return fail("Both passwords required");
     if (newPassword.length < 6) return fail("Password must be at least 6 characters");
 
-    const adminEmail = email ?? process.env.ADMIN_EMAIL ?? "admin@paktech.pk";
+    const adminEmail = email ?? process.env.ADMIN_EMAIL ?? "pktech190@gmail.com";
     if (!verifyAdminCredentials(adminEmail, currentPassword)) {
       return fail("Current password is incorrect", 401);
     }

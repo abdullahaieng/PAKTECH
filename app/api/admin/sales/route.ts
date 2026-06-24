@@ -1,4 +1,4 @@
-import { revalidatePath } from "next/cache";
+import { revalidateStorePages } from "@/lib/revalidate-store-pages";
 import { requireAdmin } from "@/lib/auth/admin-auth";
 import {
   applyBulkSale,
@@ -7,12 +7,6 @@ import {
   removeProductSale,
 } from "@/lib/services/product-service";
 import { ok, fail, unauthorized } from "@/lib/api/response";
-
-function revalidateStorePages() {
-  revalidatePath("/");
-  revalidatePath("/shop");
-  revalidatePath("/product", "layout");
-}
 
 export async function GET(request: Request) {
   if (!requireAdmin(request)) return unauthorized();
@@ -31,7 +25,7 @@ export async function POST(request: Request) {
       if (!percentOff || percentOff < 1 || percentOff > 90) {
         return fail("Discount must be between 1% and 90%");
       }
-      const result = applyBulkSale({
+      const result = await applyBulkSale({
         percentOff,
         category: body.category,
         flashSale: Boolean(body.flashSale),
@@ -41,14 +35,14 @@ export async function POST(request: Request) {
     }
 
     if (action === "clear") {
-      const result = clearSales({ category: body.category });
+      const result = await clearSales({ category: body.category });
       revalidateStorePages();
       return ok({ ...result, message: `Sale removed from ${result.updated} products` });
     }
 
     if (action === "remove") {
       if (!body.productId) return fail("Product ID required");
-      const product = removeProductSale(body.productId);
+      const product = await removeProductSale(body.productId);
       if (!product) return fail("Product not found", 404);
       revalidateStorePages();
       return ok(product);

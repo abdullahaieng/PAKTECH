@@ -2,37 +2,12 @@ import fs from "fs";
 import path from "path";
 import type { StoreDatabase } from "./types";
 import { createSeedDatabase } from "./seed";
+import { mergeData as mergeStoreData } from "./merge";
 
 const DB_PATH = path.join(process.cwd(), "data", "store-db.json");
 
 let cache: StoreDatabase | null = null;
 let cacheMtime = 0;
-let seedDefaults: StoreDatabase | null = null;
-
-function getSeedDefaults(): StoreDatabase {
-  if (!seedDefaults) seedDefaults = createSeedDatabase();
-  return seedDefaults;
-}
-
-function mergeData(data: Partial<StoreDatabase>): StoreDatabase {
-  const seed = getSeedDefaults();
-  return {
-    ...seed,
-    ...data,
-    products: data.products ?? seed.products,
-    categories: data.categories ?? seed.categories,
-    coupons: data.coupons ?? seed.coupons,
-    settings: data.settings ?? seed.settings,
-    users: data.users ?? [],
-    passwordResetTokens: data.passwordResetTokens ?? [],
-    orders: data.orders ?? [],
-    contactMessages: data.contactMessages ?? [],
-    faqs: seed.faqs,
-    testimonials: seed.testimonials,
-    teamMembers: seed.teamMembers,
-    brandStats: seed.brandStats,
-  } as StoreDatabase;
-}
 
 function readFile(): StoreDatabase {
   if (!fs.existsSync(DB_PATH)) {
@@ -52,7 +27,7 @@ function readFile(): StoreDatabase {
 
   const raw = fs.readFileSync(DB_PATH, "utf-8");
   const data = JSON.parse(raw) as Partial<StoreDatabase>;
-  const merged = mergeData(data);
+  const merged = mergeStoreData(data);
   cache = merged;
   cacheMtime = stat.mtimeMs;
   return merged;

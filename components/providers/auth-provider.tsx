@@ -1,11 +1,16 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
+import { onAuthStateChanged } from "firebase/auth";
 import type { PublicUser } from "@/types";
+import { getFirebaseAuth } from "@/lib/firebase/client";
+import { isFirebaseConfigured } from "@/lib/firebase/config";
+import { firebaseSignOut } from "@/lib/firebase/auth-actions";
 
 interface AuthContextValue {
   user: PublicUser | null;
   loading: boolean;
+  firebaseEnabled: boolean;
   refresh: () => Promise<void>;
   logout: () => Promise<void>;
 }
@@ -20,7 +25,8 @@ export function useAuth() {
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<PublicUser | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const firebaseEnabled = isFirebaseConfigured();
 
   const refresh = useCallback(async () => {
     try {
@@ -33,23 +39,54 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     } catch {
       setUser(null);
-    } finally {
-      setLoading(false);
     }
   }, []);
 
   const logout = useCallback(async () => {
-    await fetch("/api/auth/logout", { method: "POST" });
+    if (firebaseEnabled) {
+      try {
+        await firebaseSignOut();
+      } catch {
+        await fetch("/api/auth/logout", { method: "POST" });
+      }
+    } else {
+      await fetch("/api/auth/logout", { method: "POST" });
+    }
     setUser(null);
     window.location.href = "/account/login";
-  }, []);
+  }, [firebaseEnabled]);
 
   useEffect(() => {
-    refresh();
-  }, [refresh]);
+    if (!firebaseEnabled) {
+      refresh().finally(() => setLoading(false));
+      return;
+    }
+
+    const auth = getFirebaseAuth();
+    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+      setLoading(true);
+      try {
+        if (firebaseUser) {
+          const idToken = await firebaseUser.getIdToken();
+          await fetch("/api/auth/firebase/session", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ idToken }),
+          });
+        } else {
+          await fetch("/api/auth/logout", { method: "POST" });
+        }
+        await refresh();
+      } finally {
+        setLoading(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [firebaseEnabled, refresh]);
 
   return (
-    <AuthContext.Provider value={{ user, loading, refresh, logout }}>
+    <AuthContext.Provider value={{ user, loading, firebaseEnabled, refresh, logout }}>
       {children}
     </AuthContext.Provider>
   );

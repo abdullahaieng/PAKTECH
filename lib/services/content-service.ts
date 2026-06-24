@@ -1,5 +1,5 @@
 import type { ContactMessage, FAQ, Testimonial } from "@/types";
-import { getDatabase, updateDatabase } from "@/lib/db/file-store";
+import { getDatabase, updateDatabase } from "@/lib/db/store";
 
 export function getFaqs() {
   return getDatabase().faqs;

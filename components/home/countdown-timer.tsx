@@ -30,22 +30,25 @@ function TimeBlock({ value, label }: { value: number; label: string }) {
 }
 
 export function CountdownTimer({ className }: CountdownTimerProps) {
-  const [time, setTime] = useState(getTimeLeft);
+  const [time, setTime] = useState<ReturnType<typeof getTimeLeft> | null>(null);
 
   useEffect(() => {
+    setTime(getTimeLeft());
     const timer = setInterval(() => setTime(getTimeLeft()), 1000);
     return () => clearInterval(timer);
   }, []);
+
+  const display = time ?? { hours: 0, minutes: 0, seconds: 0 };
 
   return (
     <div className={className}>
       <p className="text-xs uppercase tracking-wider text-white/70 mb-2">Ends in</p>
       <div className="flex gap-2">
-        <TimeBlock value={time.hours} label="Hrs" />
+        <TimeBlock value={display.hours} label="Hrs" />
         <span className="text-2xl font-bold self-start mt-3 text-white/50">:</span>
-        <TimeBlock value={time.minutes} label="Min" />
+        <TimeBlock value={display.minutes} label="Min" />
         <span className="text-2xl font-bold self-start mt-3 text-white/50">:</span>
-        <TimeBlock value={time.seconds} label="Sec" />
+        <TimeBlock value={display.seconds} label="Sec" />
       </div>
     </div>
   );

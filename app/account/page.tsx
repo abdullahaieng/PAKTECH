@@ -44,7 +44,13 @@ export default function AccountPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div className="flex items-center gap-4">
           {user.avatar ? (
-            <img src={user.avatar} alt={user.name} className="h-14 w-14 rounded-full border-2 border-primary/20" />
+            <Image
+              src={user.avatar}
+              alt={user.name}
+              width={56}
+              height={56}
+              className="rounded-full border-2 border-primary/20 object-cover"
+            />
           ) : (
             <div className="h-14 w-14 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-lg">
               {user.name.charAt(0).toUpperCase()}

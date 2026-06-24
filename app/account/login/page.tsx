@@ -16,6 +16,8 @@ import { AuthCard } from "@/components/account/auth-card";
 import { GoogleSignInButton } from "@/components/account/google-sign-in-button";
 import { useAuth } from "@/components/providers/auth-provider";
 import { useToast } from "@/components/providers/notification-provider";
+import { signInWithEmail } from "@/lib/firebase/auth-actions";
+import { saveAuth } from "@/lib/admin/auth";
 
 const loginSchema = z.object({
   email: z.string().email("Valid email required"),
@@ -34,13 +36,16 @@ const errorMessages: Record<string, string> = {
 function LoginContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { user, refresh } = useAuth();
+  const { user, refresh, firebaseEnabled } = useAuth();
   const { toast } = useToast();
   const form = useForm<LoginForm>({ resolver: zodResolver(loginSchema) });
 
   useEffect(() => {
-    if (user) router.replace("/account");
-  }, [user, router]);
+    if (user) {
+      const redirect = searchParams.get("redirect");
+      router.replace(redirect && !redirect.startsWith("/admin") ? redirect : "/account");
+    }
+  }, [user, router, searchParams]);
 
   useEffect(() => {
     const error = searchParams.get("error");
@@ -49,6 +54,29 @@ function LoginContent() {
 
   const onSubmit = async (data: LoginForm) => {
     try {
+      const adminRes = await fetch("/api/admin/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const adminJson = await adminRes.json();
+      if (adminJson.success) {
+        saveAuth(adminJson.data.token, adminJson.data.email);
+        toast("Welcome, Admin!", "success");
+        const redirect = searchParams.get("redirect");
+        router.push(redirect?.startsWith("/admin") ? redirect : "/admin/dashboard");
+        return;
+      }
+
+      if (firebaseEnabled) {
+        await signInWithEmail(data.email, data.password);
+        await refresh();
+        toast("Welcome back!", "success");
+        const redirect = searchParams.get("redirect");
+        router.push(redirect && !redirect.startsWith("/admin") ? redirect : "/account");
+        return;
+      }
+
       const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -61,7 +89,8 @@ function LoginContent() {
       }
       await refresh();
       toast("Welcome back!", "success");
-      router.push("/account");
+      const redirect = searchParams.get("redirect");
+      router.push(redirect && !redirect.startsWith("/admin") ? redirect : "/account");
     } catch {
       toast("Something went wrong", "error");
     }

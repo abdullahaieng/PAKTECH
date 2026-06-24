@@ -3,6 +3,7 @@ import { getSessionFromRequest } from "@/lib/auth/session";
 import { getUserById } from "@/lib/services/user-service";
 import { ok, fail } from "@/lib/api/response";
 import type { CheckoutFormData } from "@/types";
+import { sendOrderConfirmation } from "@/lib/email/service";
 
 export async function GET(request: Request) {
   const session = getSessionFromRequest(request);
@@ -25,7 +26,7 @@ export async function POST(request: Request) {
     if (!items?.length) return fail("Cart is empty");
 
     const session = getSessionFromRequest(request);
-    const result = createOrder({
+    const result = await createOrder({
       items,
       couponCode,
       shippingAddress: shippingAddress as CheckoutFormData,
@@ -33,8 +34,18 @@ export async function POST(request: Request) {
     });
 
     if ("error" in result) return fail(result.error);
+    // Send order confirmation email (best-effort)
+    try {
+      const email = result.order.shippingAddress.email;
+      const html = `<h1>Order ${result.order.orderNumber}</h1><p>Thank you for your order. Total: ${result.order.total}</p>`;
+      await sendOrderConfirmation(email, result.order.orderNumber, html);
+    } catch (e) {
+      console.error("[orders] email send failed", e);
+    }
+
     return ok(result.order, 201);
-  } catch {
-    return fail("Invalid request body");
+  } catch (err) {
+    console.error("[orders] create failed:", err);
+    return fail(err instanceof Error ? err.message : "Failed to create order", 500);
   }
 }
