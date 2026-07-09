@@ -1,274 +1,156 @@
-# PakTech — Premium Tech Accessories Store
+# PakTech
 
-PakTech is a modern premium e-commerce platform for tech accessories built with a fully integrated Admin Dashboard. The storefront and admin panel run within the same application, making product management fast and seamless.
+PakTech is an e-commerce website for tech accessories. Customers can browse products, view product details, and place orders through WhatsApp. The project also includes an admin dashboard for managing products, categories, orders, and coupons from the same application.
 
-## 🌐 Live Website
+Live website: **https://paktech-nine.vercel.app**
 
-**Store:** https://paktech-nine.vercel.app
-
----
-
-## ✨ Features
-
-### Customer Store
-
-* Modern responsive UI
-* Light & Dark mode
-* Product categories
-* Product search
-* Product details page
-* Shopping cart
-* Wishlist
-* Secure authentication
-* Google Sign-In (Firebase)
-* WhatsApp ordering
-* Coupon code support
-* Mobile-friendly design
-
-### Admin Dashboard
-
-* Secure admin authentication
-* Dashboard analytics
-* Add/Edit/Delete products
-* Upload product images
-* Manage categories
-* Manage orders
-* Manage coupons
-* Customer management
-* Inventory management
-
-Changes made in the admin dashboard are reflected instantly on the store.
-
----
-
-## 🚀 Tech Stack
+## Built With
 
 * Next.js
 * React
 * TypeScript
 * Tailwind CSS
 * Firebase Authentication
-* Firestore Database
-* Cloudinary Image Storage
+* Firestore
+* Cloudinary
 * Zustand
-* Vercel Deployment
 
----
+## Getting Started
 
-## 🚀 Getting Started
-
-Clone the repository
-
-```bash
-git clone https://github.com/abdullahaieng/PAKTECH.git
-```
-
-Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Start development server
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Open
+Open your browser and visit:
 
 ```
 http://localhost:3000
 ```
 
----
+## Admin Login
 
-## 🔐 Admin Login
-
-Login from
+Go to:
 
 ```
 /account/login
 ```
 
-or visit
+or
 
 ```
 /admin
 ```
 
-Default credentials
+Default credentials:
 
-Email
+Email:
 
 ```
 pktech190@gmail.com
 ```
 
-Password
+Password:
 
 ```
 admin123
 ```
 
-You can change these inside
+These values can be changed in `.env.local`.
+
+## Main Features
+
+* Responsive design
+* Light and dark mode
+* Firebase authentication
+* Google Sign In
+* Product categories
+* Product search
+* Product details page
+* Shopping cart
+* Wishlist
+* WhatsApp ordering
+* Coupon support
+* Admin dashboard
+* Product management
+* Category management
+* Order management
+* Image upload with Cloudinary
+
+## Project Structure
 
 ```
-.env.local
+app/
+├── admin/
+├── api/
+├── account/
+
+components/
+├── admin/
+├── ui/
+
+lib/
+├── auth/
+├── db/
+├── services/
+
+store/
+public/
 ```
 
-```env
-ADMIN_EMAIL=pktech190@gmail.com
-ADMIN_PASSWORD=admin123
-ADMIN_SECRET=your-secret-key
-```
+## Available Scripts
 
----
-
-## 📁 Project Structure
-
-```
-paktech/
-│
-├── app/
-│   ├── admin/
-│   ├── api/
-│   ├── account/
-│   └── (store pages)
-│
-├── components/
-│   ├── admin/
-│   └── ui/
-│
-├── lib/
-│   ├── auth/
-│   ├── admin/
-│   ├── db/
-│   └── services/
-│
-├── store/
-├── public/
-└── styles/
-```
-
----
-
-## 🔄 Data Flow
-
-```
-Customer Order
-        │
-        ▼
-POST /api/orders
-        │
-        ▼
-Firestore Database
-        │
-        ▼
-Admin Dashboard
-        │
-        ▼
-Order Management
-```
-
-Product updates made from the Admin Dashboard are reflected immediately on the storefront.
-
----
-
-## 🎁 Coupon Codes
-
-* PAKTECH10
-* WELCOME15
-* FLASH20
-
----
-
-## 📦 Deployment
-
-The application is deployed on **Vercel**.
-
-**Live URL**
-
-https://pktech-nine.vercel.app
-
-To deploy your own version:
-
-1. Fork this repository.
-2. Import the project into Vercel.
-3. Configure the required environment variables.
-4. Deploy.
-
----
-
-## 🔥 Environment Variables
-
-```
-ADMIN_EMAIL=
-ADMIN_PASSWORD=
-ADMIN_SECRET=
-
-FIRESTORE_ENABLED=true
-
-FIREBASE_SERVICE_ACCOUNT_JSON=
-```
-
-Never commit your `.env.local` or Firebase credentials.
-
----
-
-## 📜 Available Scripts
+Start development server:
 
 ```bash
 npm run dev
 ```
 
-Start development server.
+Create production build:
 
 ```bash
 npm run build
 ```
 
-Create production build.
+Run lint:
 
 ```bash
 npm run lint
 ```
 
-Run ESLint.
-
-```bash
-npm run check
-```
-
-Run project checks.
+Seed Firestore:
 
 ```bash
 npm run seed:firestore
 ```
 
-Seed Firestore database.
+## Deployment
 
----
+The project is deployed on Vercel.
 
-## 🛡️ Security
+Live URL:
 
-* Environment variables are excluded from version control.
-* Firebase credentials are stored securely.
-* Admin authentication is protected.
-* Production secrets should be configured through Vercel Environment Variables.
+https://paktech-nine.vercel.app
 
----
+For your own deployment, add the required Firebase and Cloudinary environment variables before building the project.
 
-## 📄 License
+## Notes
 
-This project is intended for educational and portfolio purposes.
+* Do not commit `.env.local`.
+* Keep Firebase service account credentials private.
+* Configure production environment variables through your hosting provider.
 
----
+## Developed by 
 
-## 👨‍💻 Developed by
+Muhammad Abdullah Munawar
 
-**Abdullah**
+## License
 
-PakTech — Premium Tech Accessories Store
-
-🌐 https://pktech-nine.vercel.app
+This project was created for learning and portfolio purposes.
