@@ -1,0 +1,162 @@
+﻿
+> paktech@1.0.0 check
+> npm run lint && npm run build
+
+
+> paktech@1.0.0 lint
+> next lint
+
+node.exe : `next lint` is deprecated and will be removed in Next.js 16.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (`next lint` is ... in Next.js 16. 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+For new projects, use create-next-app to choose your preferred linter.
+For existing projects, migrate to the ESLint CLI:
+npx @next/codemod@canary next-lint-to-eslint-cli .
+
+
+./app/account/page.tsx
+47:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/account/settings/page.tsx
+99:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/layout/navbar.tsx
+143:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+
+> paktech@1.0.0 build
+> next build
+
+   Γû▓ Next.js 15.5.18
+   - Environments: .env.local
+   - Experiments (use with caution):
+     ┬╖ optimizePackageImports
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully in 10.6s
+   Linting and checking validity of types ...
+
+./app/account/page.tsx
+47:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/account/settings/page.tsx
+99:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/layout/navbar.tsx
+143:21  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/56) ...
+   Generating static pages (14/56) 
+   Generating static pages (28/56) 
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+[paktech] Firestore store active
+   Generating static pages (42/56) 
+ Γ£ô Generating static pages (56/56)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+Γöî ╞Æ /                                    15.8 kB         192 kB
+Γö£ Γùï /_not-found                            233 B         103 kB
+Γö£ Γùï /about                                 659 B         162 kB
+Γö£ Γùï /account                             5.17 kB         231 kB
+Γö£ Γùï /account/forgot-password             6.09 kB         286 kB
+Γö£ Γùï /account/login                       1.86 kB         288 kB
+Γö£ Γùï /account/register                    1.53 kB         288 kB
+Γö£ Γùï /account/reset-password              4.76 kB         190 kB
+Γö£ Γùï /account/settings                    7.08 kB         287 kB
+Γö£ Γùï /admin                                 233 B         103 kB
+Γö£ Γùï /admin/categories                     2.8 kB         105 kB
+Γö£ Γùï /admin/coupons                       3.41 kB         106 kB
+Γö£ Γùï /admin/customers                     1.46 kB         104 kB
+Γö£ Γùï /admin/dashboard                     3.55 kB         118 kB
+Γö£ Γùï /admin/orders                        3.19 kB         109 kB
+Γö£ ╞Æ /admin/orders/[id]                   2.87 kB         109 kB
+Γö£ Γùï /admin/products                      2.99 kB         109 kB
+Γö£ ╞Æ /admin/products/[id]                 3.02 kB         109 kB
+Γö£ Γùï /admin/sales                          3.8 kB         106 kB
+Γö£ Γùï /admin/settings                      1.74 kB         104 kB
+Γö£ ╞Æ /api/admin/auth/change-password        233 B         103 kB
+Γö£ ╞Æ /api/admin/auth/login                  233 B         103 kB
+Γö£ ╞Æ /api/admin/categories                  233 B         103 kB
+Γö£ ╞Æ /api/admin/categories/[id]             233 B         103 kB
+Γö£ ╞Æ /api/admin/content                     233 B         103 kB
+Γö£ ╞Æ /api/admin/coupons                     233 B         103 kB
+Γö£ ╞Æ /api/admin/coupons/[code]              233 B         103 kB
+Γö£ ╞Æ /api/admin/orders                      233 B         103 kB
+Γö£ ╞Æ /api/admin/orders/[id]                 233 B         103 kB
+Γö£ ╞Æ /api/admin/products                    233 B         103 kB
+Γö£ ╞Æ /api/admin/products/[id]               233 B         103 kB
+Γö£ ╞Æ /api/admin/sales                       233 B         103 kB
+Γö£ ╞Æ /api/admin/settings                    233 B         103 kB
+Γö£ ╞Æ /api/admin/stats                       233 B         103 kB
+Γö£ ╞Æ /api/admin/users                       233 B         103 kB
+Γö£ ╞Æ /api/auth/change-password              233 B         103 kB
+Γö£ ╞Æ /api/auth/firebase/session             233 B         103 kB
+Γö£ ╞Æ /api/auth/firebase/status              233 B         103 kB
+Γö£ ╞Æ /api/auth/forgot-password              233 B         103 kB
+Γö£ ╞Æ /api/auth/google                       233 B         103 kB
+Γö£ ╞Æ /api/auth/google/callback              233 B         103 kB
+Γö£ ╞Æ /api/auth/google/status                233 B         103 kB
+Γö£ ╞Æ /api/auth/login                        233 B         103 kB
+Γö£ ╞Æ /api/auth/logout                       233 B         103 kB
+Γö£ ╞Æ /api/auth/me                           233 B         103 kB
+Γö£ ╞Æ /api/auth/profile                      233 B         103 kB
+Γö£ ╞Æ /api/auth/register                     233 B         103 kB
+Γö£ ╞Æ /api/auth/reset-password               233 B         103 kB
+Γö£ ╞Æ /api/categories                        233 B         103 kB
+Γö£ ╞Æ /api/contact                           233 B         103 kB
+Γö£ ╞Æ /api/coupons/validate                  233 B         103 kB
+Γö£ ╞Æ /api/orders                            233 B         103 kB
+Γö£ ╞Æ /api/orders/[id]                       233 B         103 kB
+Γö£ ╞Æ /api/products                          233 B         103 kB
+Γö£ ╞Æ /api/products/[slug]                   233 B         103 kB
+Γö£ ╞Æ /api/store/status                      233 B         103 kB
+Γö£ Γùï /cart                                3.38 kB         174 kB
+Γö£ Γùï /checkout                            8.37 kB         323 kB
+Γö£ Γùï /contact                              6.2 kB         192 kB
+Γö£ ΓùÅ /product/[slug]                      6.22 kB         186 kB
+Γö£   Γö£ /product/paktech-pro-buds-x3
+Γö£   Γö£ /product/airstyle-pro-clone
+Γö£   Γöö /product/fittrack-smart-band-7
+Γö£ Γùï /robots.txt                            233 B         103 kB
+Γö£ ╞Æ /shop                                14.4 kB         215 kB
+Γöö Γùï /sitemap.xml                           233 B         103 kB
++ First Load JS shared by all             102 kB
+  Γö£ chunks/1255-eae4096fb21f1304.js        46 kB
+  Γö£ chunks/4bd1b696-100b9d70ed4e49c1.js  54.2 kB
+  Γöö other shared chunks (total)          2.24 kB
+
+
+╞Æ Middleware                             32.6 kB
+
+Γùï  (Static)   prerendered as static content
+ΓùÅ  (SSG)      prerendered as static HTML (uses generateStaticParams)
+╞Æ  (Dynamic)  server-rendered on demand
+

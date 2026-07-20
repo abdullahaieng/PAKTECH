@@ -1,0 +1,2294 @@
+{
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "PakTech Pro Buds X3",
+      "slug": "paktech-pro-buds-x3",
+      "description": "Experience crystal-clear audio with our flagship wireless earbuds featuring active noise cancellation, 40-hour battery life with case, and IPX5 water resistance. Perfect for Pakistan's active lifestyle.",
+      "shortDescription": "ANC wireless earbuds with 40hr battery",
+      "price": 12999,
+      "salePrice": 6500,
+      "rating": 4.8,
+      "reviewsCount": 234,
+      "category": "airpods-earbuds",
+      "images": [
+        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcf?w=800&h=800&fit=crop"
+      ],
+      "stock": 44,
+      "features": [
+        "Active Noise Cancellation",
+        "40hr Total Battery",
+        "IPX5 Water Resistant",
+        "Touch Controls",
+        "Wireless Charging Case"
+      ],
+      "specifications": {
+        "Driver Size": "12mm",
+        "Bluetooth": "5.3",
+        "Weight": "5.2g per bud",
+        "Charging": "USB-C & Wireless"
+      },
+      "isFeatured": true,
+      "isBestSeller": true,
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-BUDS-X3",
+      "brand": "PakTech"
+    },
+    {
+      "id": "prod-2",
+      "name": "SoundWave Elite Earbuds",
+      "slug": "soundwave-elite-earbuds",
+      "description": "Premium in-ear monitors with hybrid driver technology delivering rich bass and crisp highs. Ergonomic design ensures all-day comfort.",
+      "shortDescription": "Hybrid driver premium earbuds",
+      "price": 8999,
+      "salePrice": 4500,
+      "rating": 4.6,
+      "reviewsCount": 189,
+      "category": "airpods-earbuds",
+      "images": [
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&h=800&fit=crop"
+      ],
+      "stock": 62,
+      "features": [
+        "Hybrid Drivers",
+        "30hr Battery",
+        "ENC Call Clarity",
+        "Low Latency Mode"
+      ],
+      "specifications": {
+        "Driver": "10mm Dynamic + Balanced Armature",
+        "Bluetooth": "5.2",
+        "Latency": "60ms"
+      },
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-SW-ELITE",
+      "brand": "SoundWave",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-3",
+      "name": "AirStyle Pro Clone",
+      "slug": "airstyle-pro-clone",
+      "description": "Apple AirPods Pro inspired design with spatial audio, transparency mode, and adaptive EQ. Premium build at an accessible price point.",
+      "shortDescription": "Spatial audio ANC earbuds",
+      "price": 14999,
+      "salePrice": 7500,
+      "rating": 4.7,
+      "reviewsCount": 312,
+      "category": "airpods-earbuds",
+      "images": [
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&h=800&fit=crop"
+      ],
+      "stock": 37,
+      "features": [
+        "Spatial Audio",
+        "Transparency Mode",
+        "Adaptive EQ",
+        "MagSafe Charging"
+      ],
+      "specifications": {
+        "ANC": "Up to 35dB",
+        "Battery": "6hr + 24hr case",
+        "Chip": "H2 Equivalent"
+      },
+      "isFeatured": true,
+      "isNewArrival": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-AS-PRO",
+      "brand": "AirStyle",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-4",
+      "name": "BassBoost TWS Mini",
+      "slug": "bassboost-tws-mini",
+      "description": "Compact true wireless earbuds with powerful bass response. Ideal for gym, commute, and everyday use across Pakistan.",
+      "shortDescription": "Compact bass-heavy TWS",
+      "price": 4999,
+      "salePrice": 2500,
+      "rating": 4.4,
+      "reviewsCount": 456,
+      "category": "airpods-earbuds",
+      "images": [
+        "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcf?w=800&h=800&fit=crop"
+      ],
+      "stock": 120,
+      "features": [
+        "Deep Bass",
+        "20hr Battery",
+        "IPX4",
+        "Compact Case"
+      ],
+      "specifications": {
+        "Driver": "13mm",
+        "Bluetooth": "5.1",
+        "Weight": "4.8g"
+      },
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-BB-MINI",
+      "brand": "BassBoost"
+    },
+    {
+      "id": "prod-5",
+      "name": "NeckBand Pro S5",
+      "slug": "neckband-pro-s5",
+      "description": "Flexible neckband earphones with magnetic earbuds, 18-hour playback, and fast charging. Perfect for sports enthusiasts.",
+      "shortDescription": "Sports neckband with 18hr battery",
+      "price": 3499,
+      "rating": 4.3,
+      "reviewsCount": 278,
+      "category": "airpods-earbuds",
+      "images": [
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=800&fit=crop"
+      ],
+      "stock": 85,
+      "features": [
+        "Magnetic Earbuds",
+        "18hr Battery",
+        "Fast Charge",
+        "Sweat Resistant"
+      ],
+      "specifications": {
+        "Battery": "180mAh",
+        "Charging": "USB-C",
+        "Weight": "28g"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-NB-S5",
+      "brand": "PakTech",
+      "salePrice": 1750,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-6",
+      "name": "PakTech Watch Ultra",
+      "slug": "paktech-watch-ultra",
+      "description": "Premium smartwatch with AMOLED display, GPS tracking, heart rate monitoring, and 7-day battery life. Built for adventure.",
+      "shortDescription": "AMOLED GPS smartwatch",
+      "price": 24999,
+      "salePrice": 12500,
+      "rating": 4.9,
+      "reviewsCount": 167,
+      "category": "smart-watches",
+      "images": [
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop"
+      ],
+      "stock": 28,
+      "features": [
+        "AMOLED Display",
+        "GPS + GLONASS",
+        "7-Day Battery",
+        "100+ Sport Modes",
+        "IP68 Waterproof"
+      ],
+      "specifications": {
+        "Display": "1.43\" AMOLED",
+        "Battery": "450mAh",
+        "OS": "PakTech OS 3.0"
+      },
+      "isFeatured": true,
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-WATCH-U",
+      "brand": "PakTech",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-7",
+      "name": "FitTrack Smart Band 7",
+      "slug": "fittrack-smart-band-7",
+      "description": "Affordable fitness tracker with SpO2 monitoring, sleep tracking, and 14-day battery. Lightweight and comfortable.",
+      "shortDescription": "Fitness band with SpO2 monitor",
+      "price": 5999,
+      "salePrice": 3000,
+      "rating": 4.5,
+      "reviewsCount": 523,
+      "category": "smart-watches",
+      "images": [
+        "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&h=800&fit=crop"
+      ],
+      "stock": 94,
+      "features": [
+        "SpO2 Monitor",
+        "Sleep Tracking",
+        "14-Day Battery",
+        "50m Waterproof"
+      ],
+      "specifications": {
+        "Display": "1.1\" AMOLED",
+        "Sensors": "HR, SpO2, Accelerometer"
+      },
+      "isBestSeller": true,
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-FT-7",
+      "brand": "FitTrack"
+    },
+    {
+      "id": "prod-8",
+      "name": "Classic Time Smart",
+      "slug": "classic-time-smart",
+      "description": "Elegant round-faced smartwatch with leather strap option. Bluetooth calling, notification sync, and customizable watch faces.",
+      "shortDescription": "Classic design smartwatch",
+      "price": 11999,
+      "rating": 4.4,
+      "reviewsCount": 134,
+      "category": "smart-watches",
+      "images": [
+        "https://images.unsplash.com/photo-1544117518-31f4c5a167d5?w=800&h=800&fit=crop"
+      ],
+      "stock": 42,
+      "features": [
+        "Bluetooth Calling",
+        "Custom Watch Faces",
+        "Leather Strap",
+        "2-Day Battery"
+      ],
+      "specifications": {
+        "Display": "1.3\" IPS",
+        "Strap": "Leather/Silicone"
+      },
+      "isNewArrival": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-CT-SM",
+      "brand": "Classic Time",
+      "salePrice": 6000,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-9",
+      "name": "SportEdge Watch Pro",
+      "slug": "sportedge-watch-pro",
+      "description": "Rugged sports smartwatch with altimeter, barometer, and compass. Designed for hikers and outdoor enthusiasts in northern Pakistan.",
+      "shortDescription": "Rugged outdoor sports watch",
+      "price": 17999,
+      "salePrice": 9000,
+      "rating": 4.7,
+      "reviewsCount": 89,
+      "category": "smart-watches",
+      "images": [
+        "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800&h=800&fit=crop"
+      ],
+      "stock": 35,
+      "features": [
+        "Altimeter",
+        "Barometer",
+        "Compass",
+        "Military Grade",
+        "Solar Charging"
+      ],
+      "specifications": {
+        "Display": "1.4\" Transflective",
+        "Water Rating": "10ATM"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-SE-PRO",
+      "brand": "SportEdge",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-10",
+      "name": "PowerMax 30000mAh",
+      "slug": "powermax-30000mah",
+      "description": "Massive 30000mAh power bank with 65W PD output. Charge laptops, tablets, and phones simultaneously. Built for power users.",
+      "shortDescription": "65W 30000mAh laptop power bank",
+      "price": 8999,
+      "salePrice": 4500,
+      "rating": 4.8,
+      "reviewsCount": 345,
+      "category": "power-banks",
+      "images": [
+        "https://images.unsplash.com/photo-1609091839311-9f637c0d2a9f?w=800&h=800&fit=crop"
+      ],
+      "stock": 55,
+      "features": [
+        "65W PD Output",
+        "30000mAh",
+        "3 Ports",
+        "Digital Display",
+        "Airline Safe Mode"
+      ],
+      "specifications": {
+        "Capacity": "30000mAh",
+        "Input": "65W USB-C",
+        "Output": "65W + 18W + 18W"
+      },
+      "isFeatured": true,
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-PM-30K",
+      "brand": "PowerMax",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-11",
+      "name": "SlimCharge 10000",
+      "slug": "slimcharge-10000",
+      "description": "Ultra-slim 10000mAh power bank that fits in your pocket. 22.5W fast charging with built-in USB-C cable.",
+      "shortDescription": "Slim 22.5W pocket power bank",
+      "price": 4499,
+      "salePrice": 2250,
+      "rating": 4.6,
+      "reviewsCount": 412,
+      "category": "power-banks",
+      "images": [
+        "https://images.unsplash.com/photo-1625948515291-69613efd673f?w=800&h=800&fit=crop"
+      ],
+      "stock": 78,
+      "features": [
+        "Built-in Cable",
+        "22.5W Fast Charge",
+        "Slim Design",
+        "LED Indicator"
+      ],
+      "specifications": {
+        "Capacity": "10000mAh",
+        "Thickness": "14mm",
+        "Weight": "180g"
+      },
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-SC-10K",
+      "brand": "SlimCharge"
+    },
+    {
+      "id": "prod-12",
+      "name": "MagSafe Power Bank 5000",
+      "slug": "magsafe-power-bank-5000",
+      "description": "Magnetic wireless power bank for iPhone 12 and above. Snap-on charging with pass-through capability.",
+      "shortDescription": "MagSafe wireless 5000mAh",
+      "price": 5999,
+      "rating": 4.5,
+      "reviewsCount": 198,
+      "category": "power-banks",
+      "images": [
+        "https://images.unsplash.com/photo-1583394838336-acd9777362f7?w=800&h=800&fit=crop"
+      ],
+      "stock": 48,
+      "features": [
+        "MagSafe Compatible",
+        "15W Wireless",
+        "5000mAh",
+        "Pass-Through Charging"
+      ],
+      "specifications": {
+        "Capacity": "5000mAh",
+        "Wireless": "15W",
+        "Magnetic": "Yes"
+      },
+      "isNewArrival": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-MS-5K",
+      "brand": "PakTech",
+      "salePrice": 3000,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-13",
+      "name": "SolarPower 20000",
+      "slug": "solarpower-20000",
+      "description": "Solar-powered power bank for outdoor adventures. 20000mAh with dual USB output and emergency LED flashlight.",
+      "shortDescription": "Solar 20000mAh outdoor bank",
+      "price": 6999,
+      "salePrice": 3500,
+      "rating": 4.3,
+      "reviewsCount": 156,
+      "category": "power-banks",
+      "images": [
+        "https://images.unsplash.com/photo-1609592806596-2a1d5c2b5c5e?w=800&h=800&fit=crop"
+      ],
+      "stock": 32,
+      "features": [
+        "Solar Panel",
+        "20000mAh",
+        "LED Flashlight",
+        "Rugged Build"
+      ],
+      "specifications": {
+        "Capacity": "20000mAh",
+        "Solar Input": "5V/200mA",
+        "Output": "2x USB-A 2.4A"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-SP-20K",
+      "brand": "SolarPower",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-14",
+      "name": "GaN Charger 100W 4-Port",
+      "slug": "gan-charger-100w-4port",
+      "description": "Compact GaN technology charger with 100W total output across 4 ports. Charge laptop, phone, and watch simultaneously.",
+      "shortDescription": "100W GaN 4-port charger",
+      "price": 7499,
+      "salePrice": 3750,
+      "rating": 4.9,
+      "reviewsCount": 267,
+      "category": "fast-chargers",
+      "images": [
+        "https://images.unsplash.com/photo-1583863788437-eb7e5672c4e9?w=800&h=800&fit=crop"
+      ],
+      "stock": 67,
+      "features": [
+        "GaN Technology",
+        "100W Total",
+        "4 Ports",
+        "Compact Size",
+        "Multi-Device"
+      ],
+      "specifications": {
+        "Output": "100W Max",
+        "Ports": "2x USB-C + 2x USB-A",
+        "Size": "70x70x32mm"
+      },
+      "isFeatured": true,
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-GAN-100",
+      "brand": "PakTech",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-15",
+      "name": "TurboCharge 65W PD",
+      "slug": "turbocharge-65w-pd",
+      "description": "Single-port 65W USB-C PD charger. Perfect for MacBook Air, iPad Pro, and fast-charging Android phones.",
+      "shortDescription": "65W USB-C PD wall charger",
+      "price": 3999,
+      "salePrice": 2000,
+      "rating": 4.7,
+      "reviewsCount": 389,
+      "category": "fast-chargers",
+      "images": [
+        "https://images.unsplash.com/photo-1591290619762-d2a769670061?w=800&h=800&fit=crop"
+      ],
+      "stock": 92,
+      "features": [
+        "65W PD 3.0",
+        "PPS Support",
+        "Foldable Plug",
+        "Overheat Protection"
+      ],
+      "specifications": {
+        "Output": "65W USB-C",
+        "Protocols": "PD 3.0, PPS, QC 4.0"
+      },
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-TC-65",
+      "brand": "TurboCharge"
+    },
+    {
+      "id": "prod-16",
+      "name": "Wireless Stand Charger 15W",
+      "slug": "wireless-stand-charger-15w",
+      "description": "Adjustable wireless charging stand with 15W fast wireless charging. Works in portrait and landscape mode.",
+      "shortDescription": "15W adjustable wireless stand",
+      "price": 3499,
+      "rating": 4.5,
+      "reviewsCount": 234,
+      "category": "fast-chargers",
+      "images": [
+        "https://images.unsplash.com/photo-1598327109153-aa411a0a8b4d?w=800&h=800&fit=crop"
+      ],
+      "stock": 56,
+      "features": [
+        "15W Fast Wireless",
+        "Adjustable Angle",
+        "Case Friendly",
+        "LED Status"
+      ],
+      "specifications": {
+        "Output": "15W Max",
+        "Input": "QC 3.0 18W",
+        "Stand": "Adjustable"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-WS-15",
+      "brand": "PakTech",
+      "salePrice": 1750,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-17",
+      "name": "Car Charger Dual 48W",
+      "slug": "car-charger-dual-48w",
+      "description": "Dual-port car charger with 48W total output. Quick Charge 3.0 and USB-C PD for fast in-car charging.",
+      "shortDescription": "48W dual-port car charger",
+      "price": 2499,
+      "salePrice": 1250,
+      "rating": 4.4,
+      "reviewsCount": 445,
+      "category": "fast-chargers",
+      "images": [
+        "https://images.unsplash.com/photo-1619642751034-765df691d327?w=800&h=800&fit=crop"
+      ],
+      "stock": 110,
+      "features": [
+        "48W Total",
+        "QC 3.0 + PD",
+        "Compact Design",
+        "Universal Fit"
+      ],
+      "specifications": {
+        "Output": "30W USB-C + 18W USB-A",
+        "Input": "12-24V"
+      },
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-CC-48",
+      "brand": "PakTech",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-18",
+      "name": "Braided USB-C 2m",
+      "slug": "braided-usb-c-2m",
+      "description": "Premium nylon braided USB-C to USB-C cable supporting 100W PD and 480Mbps data transfer. Built to last.",
+      "shortDescription": "100W braided USB-C cable 2m",
+      "price": 1499,
+      "rating": 4.6,
+      "reviewsCount": 678,
+      "category": "usb-cables",
+      "images": [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop"
+      ],
+      "stock": 200,
+      "features": [
+        "100W PD",
+        "Nylon Braided",
+        "2 Meter Length",
+        "480Mbps Data"
+      ],
+      "specifications": {
+        "Length": "2m",
+        "Power": "100W",
+        "Data": "USB 2.0 480Mbps"
+      },
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-CB-2M",
+      "brand": "PakTech",
+      "salePrice": 750,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-19",
+      "name": "Lightning Cable MFi 1.5m",
+      "slug": "lightning-cable-mfi-1-5m",
+      "description": "MFi certified Lightning to USB-C cable with reinforced connectors. Fast charging for all iPhone models.",
+      "shortDescription": "MFi certified Lightning cable",
+      "price": 1999,
+      "salePrice": 1000,
+      "rating": 4.7,
+      "reviewsCount": 534,
+      "category": "usb-cables",
+      "images": [
+        "https://images.unsplash.com/photo-1625948515291-69613efd673f?w=800&h=800&fit=crop"
+      ],
+      "stock": 150,
+      "features": [
+        "MFi Certified",
+        "Fast Charge",
+        "Reinforced Tips",
+        "1.5m Length"
+      ],
+      "specifications": {
+        "Length": "1.5m",
+        "Certification": "Apple MFi",
+        "Power": "30W"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-LT-15",
+      "brand": "PakTech",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-20",
+      "name": "3-in-1 Charging Cable",
+      "slug": "3-in-1-charging-cable",
+      "description": "Universal 3-in-1 cable with USB-C, Lightning, and Micro USB connectors. One cable for all your devices.",
+      "shortDescription": "Universal 3-in-1 charging cable",
+      "price": 1299,
+      "rating": 4.3,
+      "reviewsCount": 892,
+      "category": "usb-cables",
+      "images": [
+        "https://images.unsplash.com/photo-1583394838336-acd9777362f7?w=800&h=800&fit=crop"
+      ],
+      "stock": 180,
+      "features": [
+        "3 Connectors",
+        "Nylon Braided",
+        "1.2m Length",
+        "Travel Friendly"
+      ],
+      "specifications": {
+        "Connectors": "USB-C, Lightning, Micro USB",
+        "Length": "1.2m"
+      },
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-3IN1",
+      "brand": "PakTech",
+      "salePrice": 650
+    },
+    {
+      "id": "prod-21",
+      "name": "BoomBox Mini Speaker",
+      "slug": "boombox-mini-speaker",
+      "description": "Portable Bluetooth speaker with 360° sound, IPX7 waterproof rating, and 12-hour battery. Perfect for beach trips and picnics.",
+      "shortDescription": "IPX7 waterproof portable speaker",
+      "price": 5999,
+      "salePrice": 3000,
+      "rating": 4.6,
+      "reviewsCount": 234,
+      "category": "bluetooth-speakers",
+      "images": [
+        "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800&h=800&fit=crop"
+      ],
+      "stock": 44,
+      "features": [
+        "360° Sound",
+        "IPX7 Waterproof",
+        "12hr Battery",
+        "TWS Pairing"
+      ],
+      "specifications": {
+        "Output": "20W",
+        "Battery": "3600mAh",
+        "Bluetooth": "5.0"
+      },
+      "isFeatured": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-BB-MIN",
+      "brand": "BoomBox",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-22",
+      "name": "SoundBar Portable 40W",
+      "slug": "soundbar-portable-40w",
+      "description": "Powerful 40W portable soundbar with deep bass radiator. Built-in microphone for calls and voice assistant.",
+      "shortDescription": "40W portable soundbar",
+      "price": 8999,
+      "salePrice": 4500,
+      "rating": 4.8,
+      "reviewsCount": 156,
+      "category": "bluetooth-speakers",
+      "images": [
+        "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&h=800&fit=crop"
+      ],
+      "stock": 30,
+      "features": [
+        "40W Output",
+        "Deep Bass",
+        "Built-in Mic",
+        "AUX Input"
+      ],
+      "specifications": {
+        "Output": "40W",
+        "Drivers": "2x 20W",
+        "Battery": "5000mAh"
+      },
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-SB-40",
+      "brand": "SoundBar",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-23",
+      "name": "Party Speaker RGB",
+      "slug": "party-speaker-rgb",
+      "description": "RGB light show Bluetooth speaker with 60W output and karaoke microphone input. Party essential!",
+      "shortDescription": "60W RGB party speaker",
+      "price": 12999,
+      "salePrice": 6500,
+      "rating": 4.5,
+      "reviewsCount": 98,
+      "category": "bluetooth-speakers",
+      "images": [
+        "https://images.unsplash.com/photo-1558756520-22cfe751d878?w=800&h=800&fit=crop"
+      ],
+      "stock": 22,
+      "features": [
+        "RGB Lights",
+        "60W Output",
+        "Karaoke Mic Input",
+        "Remote Control"
+      ],
+      "specifications": {
+        "Output": "60W",
+        "Battery": "8000mAh",
+        "Mic Input": "3.5mm"
+      },
+      "isNewArrival": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-PS-RGB",
+      "brand": "PartyBox",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-24",
+      "name": "Pro Gaming Headset 7.1",
+      "slug": "pro-gaming-headset-7-1",
+      "description": "Virtual 7.1 surround sound gaming headset with noise-cancelling mic and RGB lighting. Compatible with PC, PS5, and Xbox.",
+      "shortDescription": "7.1 surround gaming headset",
+      "price": 7999,
+      "salePrice": 4000,
+      "rating": 4.7,
+      "reviewsCount": 312,
+      "category": "gaming-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=800&fit=crop"
+      ],
+      "stock": 40,
+      "features": [
+        "Virtual 7.1",
+        "Noise-Cancel Mic",
+        "RGB Lighting",
+        "Memory Foam"
+      ],
+      "specifications": {
+        "Driver": "50mm",
+        "Frequency": "20Hz-20kHz",
+        "Cable": "2m Braided"
+      },
+      "isFeatured": true,
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-GH-71",
+      "brand": "ProGamer",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-25",
+      "name": "Mechanical Keyboard RGB",
+      "slug": "mechanical-keyboard-rgb",
+      "description": "Hot-swappable mechanical keyboard with Gateron switches, per-key RGB, and aluminum frame. TKL layout.",
+      "shortDescription": "Hot-swap mechanical RGB keyboard",
+      "price": 11999,
+      "salePrice": 6000,
+      "rating": 4.8,
+      "reviewsCount": 189,
+      "category": "gaming-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1511467659766-8898a5a4b0a0?w=800&h=800&fit=crop"
+      ],
+      "stock": 25,
+      "features": [
+        "Hot-Swap",
+        "Gateron Switches",
+        "Per-Key RGB",
+        "Aluminum Frame"
+      ],
+      "specifications": {
+        "Layout": "TKL 87 Keys",
+        "Switch": "Gateron Red",
+        "Polling": "1000Hz"
+      },
+      "isNewArrival": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-MK-RGB",
+      "brand": "KeyMaster",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-26",
+      "name": "Gaming Mouse 16000 DPI",
+      "slug": "gaming-mouse-16000-dpi",
+      "description": "Precision gaming mouse with 16000 DPI sensor, 8 programmable buttons, and customizable RGB zones.",
+      "shortDescription": "16000 DPI programmable gaming mouse",
+      "price": 4999,
+      "salePrice": 2500,
+      "rating": 4.6,
+      "reviewsCount": 445,
+      "category": "gaming-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&h=800&fit=crop"
+      ],
+      "stock": 65,
+      "features": [
+        "16000 DPI",
+        "8 Buttons",
+        "RGB Zones",
+        "Onboard Memory"
+      ],
+      "specifications": {
+        "Sensor": "PMW3360",
+        "DPI": "100-16000",
+        "Weight": "85g"
+      },
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-GM-16K",
+      "brand": "ProGamer"
+    },
+    {
+      "id": "prod-27",
+      "name": "Controller Grip Phone Mount",
+      "slug": "controller-grip-phone-mount",
+      "description": "Transform your phone into a gaming console with this Bluetooth controller grip. Supports most Android and iOS games.",
+      "shortDescription": "Bluetooth phone gaming controller",
+      "price": 4499,
+      "rating": 4.4,
+      "reviewsCount": 167,
+      "category": "gaming-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1612287230202-1ff1d85c1e7f?w=800&h=800&fit=crop"
+      ],
+      "stock": 38,
+      "features": [
+        "Bluetooth 5.0",
+        "Universal Fit",
+        "400mAh Battery",
+        "Telescopic Grip"
+      ],
+      "specifications": {
+        "Compatibility": "4.7-6.5 inch phones",
+        "Battery": "8hr playtime"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-CG-PM",
+      "brand": "GameGrip",
+      "salePrice": 2250,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-28",
+      "name": "MagSafe Clear Case",
+      "slug": "magsafe-clear-case",
+      "description": "Crystal clear MagSafe compatible case with anti-yellowing technology and military-grade drop protection.",
+      "shortDescription": "MagSafe clear anti-yellow case",
+      "price": 2499,
+      "salePrice": 1250,
+      "rating": 4.5,
+      "reviewsCount": 567,
+      "category": "mobile-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=800&fit=crop"
+      ],
+      "stock": 120,
+      "features": [
+        "MagSafe Compatible",
+        "Anti-Yellowing",
+        "Drop Protection",
+        "Crystal Clear"
+      ],
+      "specifications": {
+        "Material": "TPU + Polycarbonate",
+        "Drop Rating": "10ft"
+      },
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-MS-CC",
+      "brand": "PakTech",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-29",
+      "name": "Phone Stand Aluminum",
+      "slug": "phone-stand-aluminum",
+      "description": "Premium aluminum phone and tablet stand with adjustable angle. Works with devices up to 12.9 inches.",
+      "shortDescription": "Adjustable aluminum phone stand",
+      "price": 1999,
+      "rating": 4.6,
+      "reviewsCount": 345,
+      "category": "mobile-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=800&fit=crop"
+      ],
+      "stock": 88,
+      "features": [
+        "Aluminum Build",
+        "Adjustable Angle",
+        "Anti-Slip Base",
+        "Foldable"
+      ],
+      "specifications": {
+        "Material": "Aircraft Aluminum",
+        "Max Device": "12.9 inch"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-PS-AL",
+      "brand": "PakTech",
+      "salePrice": 1000,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-30",
+      "name": "Screen Protector Tempered Glass",
+      "slug": "screen-protector-tempered-glass",
+      "description": "9H hardness tempered glass screen protector with oleophobic coating. Edge-to-edge coverage for most phone models.",
+      "shortDescription": "9H tempered glass protector",
+      "price": 999,
+      "salePrice": 500,
+      "rating": 4.4,
+      "reviewsCount": 1234,
+      "category": "mobile-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=800&fit=crop"
+      ],
+      "stock": 300,
+      "features": [
+        "9H Hardness",
+        "Oleophobic",
+        "Bubble Free",
+        "Case Friendly"
+      ],
+      "specifications": {
+        "Hardness": "9H",
+        "Thickness": "0.33mm",
+        "Coating": "Oleophobic"
+      },
+      "isFlashSale": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-SP-TG",
+      "brand": "PakTech"
+    },
+    {
+      "id": "prod-31",
+      "name": "Ring Light Phone Clip",
+      "slug": "ring-light-phone-clip",
+      "description": "Clip-on ring light for selfies and video calls. 3 brightness levels and rechargeable battery.",
+      "shortDescription": "Clip-on selfie ring light",
+      "price": 1499,
+      "rating": 4.3,
+      "reviewsCount": 456,
+      "category": "mobile-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1611532736597-de2d5175a7f0?w=800&h=800&fit=crop"
+      ],
+      "stock": 75,
+      "features": [
+        "3 Brightness Levels",
+        "Rechargeable",
+        "Universal Clip",
+        "Compact"
+      ],
+      "specifications": {
+        "LED Count": "36",
+        "Battery": "500mAh",
+        "Color Temp": "5500K"
+      },
+      "isNewArrival": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-RL-PC",
+      "brand": "LitePro",
+      "salePrice": 750,
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-32",
+      "name": "Magnetic Car Mount Pro",
+      "slug": "magnetic-car-mount-pro",
+      "description": "Strong magnetic car phone mount with 360° rotation. Vent or dashboard installation options included.",
+      "shortDescription": "360° magnetic car mount",
+      "price": 1999,
+      "salePrice": 1000,
+      "rating": 4.7,
+      "reviewsCount": 678,
+      "category": "car-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1449965405229-59775e25960?w=800&h=800&fit=crop"
+      ],
+      "stock": 95,
+      "features": [
+        "Strong Magnet",
+        "360° Rotation",
+        "Vent + Dashboard",
+        "One-Hand Operation"
+      ],
+      "specifications": {
+        "Mount Type": "Magnetic",
+        "Rotation": "360°",
+        "Phone Size": "Universal"
+      },
+      "isBestSeller": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-CM-PRO",
+      "brand": "PakTech",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-33",
+      "name": "Car Wireless Charger Mount",
+      "slug": "car-wireless-charger-mount",
+      "description": "Auto-clamping wireless car charger with 15W fast charging. Infrared sensor for one-hand operation while driving.",
+      "shortDescription": "15W auto-clamp wireless car mount",
+      "price": 5499,
+      "salePrice": 2750,
+      "rating": 4.6,
+      "reviewsCount": 234,
+      "category": "car-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1619642751034-765df691d327?w=800&h=800&fit=crop"
+      ],
+      "stock": 42,
+      "features": [
+        "15W Wireless",
+        "Auto Clamp",
+        "IR Sensor",
+        "Vent Mount"
+      ],
+      "specifications": {
+        "Wireless": "15W",
+        "Clamp": "Auto IR",
+        "Input": "QC 3.0"
+      },
+      "isFeatured": true,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-CW-CM",
+      "brand": "DriveTech",
+      "isFlashSale": true
+    },
+    {
+      "id": "prod-34",
+      "name": "FM Transmitter Bluetooth",
+      "slug": "fm-transmitter-bluetooth",
+      "description": "Bluetooth FM transmitter with dual USB ports, hands-free calling, and Hi-Fi audio streaming to your car stereo.",
+      "shortDescription": "Bluetooth FM car transmitter",
+      "price": 2499,
+      "rating": 4.3,
+      "reviewsCount": 389,
+      "category": "car-accessories",
+      "images": [
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=800&fit=crop"
+      ],
+      "stock": 68,
+      "features": [
+        "Bluetooth 5.0",
+        "Dual USB",
+        "Hands-Free",
+        "Hi-Fi Audio"
+      ],
+      "specifications": {
+        "FM Range": "87.5-108MHz",
+        "USB": "2x 2.4A",
+        "Bluetooth": "5.0"
+      },
+      "reviews": [
+        {
+          "id": "rev-1",
+          "author": "Ahmed Khan",
+          "city": "Lahore",
+          "rating": 5,
+          "date": "2025-04-15",
+          "comment": "Excellent quality! Exactly as described. Fast delivery to Lahore."
+        },
+        {
+          "id": "rev-2",
+          "author": "Fatima Ali",
+          "city": "Karachi",
+          "rating": 4,
+          "date": "2025-03-22",
+          "comment": "Great product, works perfectly. Packaging was premium."
+        },
+        {
+          "id": "rev-3",
+          "author": "Usman Malik",
+          "city": "Islamabad",
+          "rating": 5,
+          "date": "2025-02-10",
+          "comment": "Best tech store in Pakistan. Highly recommend PakTech!"
+        }
+      ],
+      "sku": "PT-FM-BT",
+      "brand": "DriveTech",
+      "salePrice": 1250,
+      "isFlashSale": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "AirPods & Earbuds",
+      "slug": "airpods-earbuds",
+      "description": "Premium wireless earbuds and AirPods alternatives",
+      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=600&fit=crop",
+      "productCount": 5
+    },
+    {
+      "id": "cat-2",
+      "name": "Smart Watches",
+      "slug": "smart-watches",
+      "description": "Feature-rich smartwatches for every lifestyle",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=600&fit=crop",
+      "productCount": 4
+    },
+    {
+      "id": "cat-3",
+      "name": "Power Banks",
+      "slug": "power-banks",
+      "description": "High-capacity portable chargers",
+      "image": "https://images.unsplash.com/photo-1609091839311-9f637c0d2a9f?w=600&h=600&fit=crop",
+      "productCount": 4
+    },
+    {
+      "id": "cat-4",
+      "name": "Fast Chargers",
+      "slug": "fast-chargers",
+      "description": "GaN and PD fast charging solutions",
+      "image": "https://images.unsplash.com/photo-1583863788437-eb7e5672c4e9?w=600&h=600&fit=crop",
+      "productCount": 4
+    },
+    {
+      "id": "cat-5",
+      "name": "USB Cables",
+      "slug": "usb-cables",
+      "description": "Durable braided and fast-charging cables",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop",
+      "productCount": 3
+    },
+    {
+      "id": "cat-6",
+      "name": "Bluetooth Speakers",
+      "slug": "bluetooth-speakers",
+      "description": "Portable speakers with premium sound",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&h=600&fit=crop",
+      "productCount": 3
+    },
+    {
+      "id": "cat-7",
+      "name": "Gaming Accessories",
+      "slug": "gaming-accessories",
+      "description": "Pro gaming gear for competitive players",
+      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=600&fit=crop",
+      "productCount": 4
+    },
+    {
+      "id": "cat-8",
+      "name": "Mobile Accessories",
+      "slug": "mobile-accessories",
+      "description": "Cases, stands, and phone essentials",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=600&fit=crop",
+      "productCount": 4
+    },
+    {
+      "id": "cat-9",
+      "name": "Car Accessories",
+      "slug": "car-accessories",
+      "description": "Smart car mounts and chargers",
+      "image": "https://images.unsplash.com/photo-1449965405229-59775e25960?w=600&h=600&fit=crop",
+      "productCount": 3
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-1780688723307",
+      "orderNumber": "PT-2026-0003",
+      "userId": "user-1780688024368",
+      "createdAt": "2026-06-05T19:45:23.308Z",
+      "status": "pending",
+      "items": [
+        {
+          "productId": "prod-7",
+          "productName": "FitTrack Smart Band 7",
+          "productSlug": "fittrack-smart-band-7",
+          "productImage": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&h=800&fit=crop",
+          "price": 3000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 3000,
+      "shipping": 250,
+      "discount": 0,
+      "total": 3250,
+      "shippingAddress": {
+        "firstName": "farhat",
+        "lastName": "sattar",
+        "email": "farhat@gmail.com",
+        "phone": "03012314568",
+        "address": "street24,parkview city",
+        "city": "lahore",
+        "province": "Punjab",
+        "postalCode": "54000"
+      },
+      "paymentMethod": "cod",
+      "notes": ""
+    },
+    {
+      "id": "order-1780688310155",
+      "orderNumber": "PT-2026-0002",
+      "userId": "user-1780688024368",
+      "createdAt": "2026-06-05T19:38:30.156Z",
+      "status": "pending",
+      "items": [
+        {
+          "productId": "prod-1",
+          "productName": "PakTech Pro Buds X3",
+          "productSlug": "paktech-pro-buds-x3",
+          "productImage": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&h=800&fit=crop",
+          "price": 6500,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 6500,
+      "shipping": 0,
+      "discount": 0,
+      "total": 6500,
+      "shippingAddress": {
+        "firstName": "farhat",
+        "lastName": "sattar",
+        "email": "farhat@gmail.com",
+        "phone": "03012314568",
+        "address": "street23,pak colony",
+        "city": "lahore",
+        "province": "Punjab",
+        "postalCode": "54000"
+      },
+      "paymentMethod": "cod",
+      "notes": ""
+    },
+    {
+      "id": "order-1780661156527",
+      "orderNumber": "PT-2026-0001",
+      "createdAt": "2026-06-05T12:05:56.528Z",
+      "status": "shipped",
+      "items": [
+        {
+          "productId": "prod-3",
+          "productName": "AirStyle Pro Clone",
+          "productSlug": "airstyle-pro-clone",
+          "productImage": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&h=800&fit=crop",
+          "price": 11999,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 11999,
+      "shipping": 0,
+      "discount": 0,
+      "total": 11999,
+      "shippingAddress": {
+        "firstName": "Abdullah",
+        "lastName": "Munawar",
+        "email": "abdullahrao0731@gmail.com",
+        "phone": "03205447931",
+        "address": "House 123/124 near daniyal super store garden town multan",
+        "city": "Multan",
+        "province": "Punjab",
+        "postalCode": ""
+      },
+      "paymentMethod": "cod",
+      "notes": ""
+    }
+  ],
+  "coupons": [
+    {
+      "code": "PAKTECH10",
+      "discount": 10,
+      "active": true,
+      "description": "10% off all orders"
+    },
+    {
+      "code": "WELCOME15",
+      "discount": 15,
+      "active": true,
+      "description": "15% off for new customers"
+    },
+    {
+      "code": "FLASH20",
+      "discount": 20,
+      "active": true,
+      "description": "20% flash sale discount"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": "Do you offer Cash on Delivery (COD)?",
+      "answer": "Yes! We offer Cash on Delivery across Pakistan. You can pay when you receive your order. Some remote areas may require advance payment."
+    },
+    {
+      "id": "faq-2",
+      "question": "How long does delivery take?",
+      "answer": "Major cities (Lahore, Karachi, Islamabad, Rawalpindi): 2-3 business days. Other cities: 3-5 business days. Remote areas: 5-7 business days."
+    },
+    {
+      "id": "faq-3",
+      "question": "Are the products original?",
+      "answer": "Absolutely! We only sell 100% original, quality-checked products. Every item comes with a warranty card and authenticity guarantee."
+    },
+    {
+      "id": "faq-4",
+      "question": "What is your return policy?",
+      "answer": "You can return an unused product within 7 days if it's defective or doesn't match the description. Return shipping is paid by the customer unless the product is defective."
+    },
+    {
+      "id": "faq-5",
+      "question": "When do I get free shipping?",
+      "answer": "Orders over Rs. 5,000 get free standard shipping across Pakistan. Orders below that amount have a Rs. 250 standard shipping charge."
+    },
+    {
+      "id": "faq-6",
+      "question": "How do I order via WhatsApp?",
+      "answer": "Message us on WhatsApp with the product name or link. Our team will confirm your order and share delivery details."
+    },
+    {
+      "id": "faq-7",
+      "question": "How do I claim warranty?",
+      "answer": "Follow the process on the warranty card included with your product, or contact our support team. Email: hello@paktech.pk or WhatsApp: +92 300 1234567"
+    },
+    {
+      "id": "faq-8",
+      "question": "Do you accept bulk/corporate orders?",
+      "answer": "Yes! Special pricing is available for corporate and bulk orders. Contact us via the contact page or email."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t-1",
+      "name": "Ahmed Hassan",
+      "city": "Lahore",
+      "rating": 5,
+      "comment": "Ordered from PakTech — the product was completely genuine and delivered in 2 days. Highly recommended for tech lovers in Pakistan!",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      "product": "PakTech Pro Buds X3"
+    },
+    {
+      "id": "t-2",
+      "name": "Sana Mirza",
+      "city": "Karachi",
+      "rating": 5,
+      "comment": "Best online tech store I've found in Pakistan. COD option made it so easy to order. The smartwatch quality is amazing!",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      "product": "PakTech Watch Ultra"
+    },
+    {
+      "id": "t-3",
+      "name": "Bilal Ahmed",
+      "city": "Islamabad",
+      "rating": 4,
+      "comment": "The GaN charger is incredibly fast — charges my MacBook and phone at the same time. Premium packaging too.",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      "product": "GaN Charger 100W"
+    },
+    {
+      "id": "t-4",
+      "name": "Ayesha Khan",
+      "city": "Rawalpindi",
+      "rating": 5,
+      "comment": "Ordered via WhatsApp and got same-day confirmation. Customer service is top notch. Will order again!",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+      "product": "FitTrack Smart Band 7"
+    },
+    {
+      "id": "t-5",
+      "name": "Usman Tariq",
+      "city": "Faisalabad",
+      "rating": 5,
+      "comment": "The gaming headset sound quality is incredible. Footsteps are crystal clear in PUBG. Worth every rupee!",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+      "product": "Pro Gaming Headset 7.1"
+    },
+    {
+      "id": "t-6",
+      "name": "Maria Joseph",
+      "city": "Multan",
+      "rating": 4,
+      "comment": "The 30000mAh power bank lasted our entire family trip. Genuine product with warranty card. Thank you PakTech!",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop",
+      "product": "PowerMax 30000mAh"
+    }
+  ],
+  "teamMembers": [
+    {
+      "id": "team-1",
+      "name": "Hassan Raza",
+      "role": "Founder & CEO",
+      "bio": "Tech enthusiast with 10+ years in Pakistan's electronics industry. Passionate about making premium tech accessible.",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop"
+    },
+    {
+      "id": "team-2",
+      "name": "Zainab Ali",
+      "role": "Head of Operations",
+      "bio": "Ensures every order reaches customers on time with premium packaging and quality checks.",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+    },
+    {
+      "id": "team-3",
+      "name": "Omar Farooq",
+      "role": "Product Curator",
+      "bio": "Handpicks every product in our catalog, ensuring only the best tech accessories make it to PakTech.",
+      "image": "https://images.unsplash.com/photo-1519081908943-0e06a1b60852?w=400&h=400&fit=crop"
+    },
+    {
+      "id": "team-4",
+      "name": "Fatima Noor",
+      "role": "Customer Success Lead",
+      "bio": "Leads our support team to deliver exceptional customer experiences across Pakistan.",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
+    }
+  ],
+  "brandStats": [
+    {
+      "label": "Happy Customers",
+      "value": "50,000+"
+    },
+    {
+      "label": "Products Sold",
+      "value": "200,000+"
+    },
+    {
+      "label": "Cities Covered",
+      "value": "150+"
+    },
+    {
+      "label": "Products",
+      "value": "500+"
+    }
+  ],
+  "contactMessages": [],
+  "users": [
+    {
+      "id": "user-1780688024368",
+      "name": "farhat",
+      "email": "farhat@gmail.com",
+      "phone": "03012314568",
+      "provider": "email",
+      "firebaseUid": "4qOvs11aoqYemgStatYi462JioC2",
+      "emailVerified": false,
+      "createdAt": "2026-06-05T19:33:44.368Z",
+      "updatedAt": "2026-06-05T19:33:44.735Z"
+    }
+  ],
+  "passwordResetTokens": [],
+  "settings": {
+    "freeShippingThreshold": 5000,
+    "standardShipping": 250,
+    "expressShipping": 500
+  },
+  "version": 1
+}
