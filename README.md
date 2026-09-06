@@ -35,6 +35,24 @@ Open your browser and visit:
 http://localhost:3000
 ```
 
+# Screenshots
+
+## Home Page
+![Home](./screenshots/home.png)
+
+## About Page
+![Products](./screenshots/products.png)
+
+## Dashboard
+![Dashboard](./screenshots/admin.png)
+
+## Login
+![Login](./screenshots/login.png)
+
+## Contact
+![Contact](./screenshots/contact.png)
+
+
 ## Admin Login
 
 Go to:
@@ -141,22 +159,6 @@ https://paktech-nine.vercel.app
 
 For your own deployment, add the required Firebase and Cloudinary environment variables before building the project.
 
-# Screenshots
-
-## Home Page
-![Home](./screenshots/home.png)
-
-## About Page
-![Products](./screenshots/products.png)
-
-## Dashboard
-![Dashboard](./screenshots/admin.png)
-
-## Login
-![Login](./screenshots/login.png)
-
-## Contact
-![Contact](./screenshots/contact.png)
 
 
 ## Developed by 
