@@ -15,25 +15,6 @@ Live website: **https://paktech-nine.vercel.app**
 * Cloudinary
 * Zustand
 
-## Getting Started
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open your browser and visit:
-
-```
-http://localhost:3000
-```
 
 # Screenshots
 
@@ -78,7 +59,7 @@ pktech190@gmail.com
 Password:
 
 ```
-admin123
+
 ```
 
 These values can be changed in `.env.local`.
