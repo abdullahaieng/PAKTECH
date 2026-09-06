@@ -141,11 +141,23 @@ https://paktech-nine.vercel.app
 
 For your own deployment, add the required Firebase and Cloudinary environment variables before building the project.
 
-## Notes
+# Screenshots
 
-* Do not commit `.env.local`.
-* Keep Firebase service account credentials private.
-* Configure production environment variables through your hosting provider.
+## Home Page
+![Home](./screenshots/home.png)
+
+## About Page
+![Products](./screenshots/products.png)
+
+## Dashboard
+![Dashboard](./screenshots/admin.png)
+
+## Login
+![Login](./screenshots/login.png)
+
+## Contact
+![Contact](./screenshots/contact.png)
+
 
 ## Developed by 
 
